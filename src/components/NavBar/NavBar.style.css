@@ -96,6 +96,8 @@ img{
     }
     .mobile__icons.active{
         display: flex;
+        color: white;
+        margin-top: 20px;
     }
     .mobile__icons.closed{
         display: none;
