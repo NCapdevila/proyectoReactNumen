@@ -3,7 +3,6 @@ import NavBarLink from "../NavBarLink/NavBarLink";
 
 
 const NavBarLinkContainer = (props) => {
-    console.log(props.estado)
     return (
         <>       <div className={`links__container ${props.estado ? 'active' : 'closed'}`}>
         <li>
