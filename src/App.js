@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import OfertaInicio from "./Componets/OfertaInicio/OfertaInicio";
+import ImagenLogo from "./Componets/ImagenLogo/ImagenLogo";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <OfertaInicio texto={"Free Delivery over $100. Gift with Purchase over $150"} />
+      </div>
+
+      <div>
+      <ImagenLogo  />
+      </div>
+
     </div>
-  );
+  )
 }
 
 export default App;
