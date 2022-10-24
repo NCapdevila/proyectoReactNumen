@@ -1,0 +1,11 @@
+.contenedor-logo-nav{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 55px;
+    padding-top: 20px;
+}
+.imagen-logo{
+    width: 95px;
+    height: 95px;
+    border-radius: 20px;
+}
