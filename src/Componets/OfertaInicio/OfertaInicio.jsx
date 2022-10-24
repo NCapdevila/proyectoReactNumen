@@ -1,5 +1,5 @@
 import React from 'react';
-import './style-OfertaInicio.css';
+import './indexOfert.css';
 function OfertaInicio ({ texto }){
     return (
         <div className="contenedor-principal">
