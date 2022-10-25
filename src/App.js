@@ -1,4 +1,4 @@
-import OfertaInicio from "./components/OfertaInicio/OfertaInicio";
+import OfertaInicio from "./components/OfferInitial/OfferInitial";
 import './App.css';
 
 import NavBar from './components/NavBar/NavBar';

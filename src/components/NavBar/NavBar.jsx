@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from 'react-icons/fa'
 import NavBarLinkContainer from "./NavBarLinkContainer/NavBarLinkContainer";
-import ImagenLogo from '../ImagenLogo/ImagenLogo'
+import ImageLogo from '../ImageLogo/ImageLogo'
 
 const NavBar = () => {
 
@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <>
       <ul>
-        <ImagenLogo />
+        <ImageLogo />
         <NavBarLinkContainer estado={showMobileMenu}></NavBarLinkContainer>
         <div  className='nav__icons' onClick={() => setShowMobileMenu(!showMobileMenu)}>
             {
