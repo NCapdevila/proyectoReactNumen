@@ -1,5 +1,5 @@
 import React from 'react';
-import './style-ImagenLogo.css';
+import './ImageLogo.css';
 import logoNav from './logoNav.jpg';
 
 function ImagenLogo (){
