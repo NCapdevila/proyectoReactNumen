@@ -6,12 +6,15 @@ import { FaBars } from 'react-icons/fa'
 import NavBarLinkContainer from "./NavBarLinkContainer/NavBarLinkContainer";
 import ImageLogo from '../ImageLogo/ImageLogo'
 
+
 const NavBar = () => {
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
+    
     <>
+      <div>
       <ul>
         <ImageLogo />
         <NavBarLinkContainer estado={showMobileMenu}></NavBarLinkContainer>
@@ -21,6 +24,7 @@ const NavBar = () => {
             }
         </div>
       </ul>
+      </div>
     </>
   );
 };
