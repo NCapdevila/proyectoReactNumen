@@ -1,22 +1,26 @@
+import NavBarDropDown from "../NavBarDropDown/NavBarDropDown";
 import NavBarIcon from "../NavBarIcons/NavBarIcons";
 import NavBarLink from "../NavBarLink/NavBarLink";
-
+import { useState } from 'react';
+import {dropDownItemsMens} from '../NavBarDropDown/NavBarDropDownItems';
 
 const NavBarLinkContainer = (props) => {
+  const [dropdown, setDropdown] = useState(false);
     return (
-        <>       <div className={`links__container ${props.estado ? 'active' : 'closed'}`}>
+        <>       
+        <div className={`links__container ${props.estado ? 'active' : 'closed'}`}>
         <li>
-            
-          <NavBarLink text="Productos"></NavBarLink>
+          <NavBarLink text="Mujer"></NavBarLink>
+        </li>
+        <li 
+        onMouseEnter={() => setDropdown(true)}
+        onMouseLeave={() => setDropdown(false)}
+        >
+          <NavBarLink text="Hombre"></NavBarLink>
+          { dropdown && <NavBarDropDown links={dropDownItemsMens} />}
         </li>
         <li>
-          <NavBarLink text="Contactos"></NavBarLink>
-        </li>
-        <li>
-          <NavBarLink text="Sobre nosotros"></NavBarLink>
-        </li>
-        <li>
-          <NavBarLink text="Buscar"></NavBarLink>
+          <NavBarLink text="Niños"></NavBarLink>
         </li>
         <div className={`mobile__icons ${props.estado ? 'active' : 'closed'}`}>
             <NavBarIcon />

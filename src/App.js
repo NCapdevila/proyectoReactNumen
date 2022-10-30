@@ -1,26 +1,22 @@
-import OfertaInicio from "./components/OfferInitial/OfferInitial";
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ButtonTwo from "./components/ButtonTwo/ButtonTwo";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CardsTwo from "./components/CardsTwo/CardsTwo";
-
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ImgBottom from './components/ImgBottom/ImgBottom';
+import Footer from './components/Footer/Footer';
+import CardsBe from './components/CardsBe/CardsBe';
 
 function App() {
   return (
-    <div className="App">
 
-      
-    <div>
-      <div>
-        <OfertaInicio texto={"Free Delivery over $100. Gift with Purchase over $150"} />
+    <div className="App">
         <NavBar></NavBar>
-        <ButtonTwo>comprar</ButtonTwo>
-       <CardsTwo />
-      </div>
-     
+    <div>
+    <h1>Descubrí más sobre nosotros</h1>
+    <CardsBe />
     </div>
+      <ImgBottom />
+      <Footer />
     </div>
   )
 }

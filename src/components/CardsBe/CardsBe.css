@@ -1,0 +1,24 @@
+.containerCard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: blue;
+}
+
+.card {
+    width: auto;
+    border: none;
+    color:dimgray;
+}
+
+.cardtitle {
+    align-items: center;
+    justify-items: center;
+    background-color: blue;
+}
+
+.cardtext {
+    height: 163px;
+    font-size: 16px;
+}
