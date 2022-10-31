@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&family=Roboto+Slab&display=swap');
+
+html, body{
+    font-family: 'Roboto Slab', serif;
+}
+
+.container-footer{
+    height: 280px;
+    background-color: #1b1b1b;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 50px 20px 20px;
+    font-size: 0.9rem;
+    
+}
+ul{
+    margin: 0;
+}
+
+.col{
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.container-list{
+    height: auto;
+    width: 215px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.container-list-info{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0px 0px 20px 0px;
+}
+.li-info:hover{
+    padding-left: 10px;
+    color: antiquewhite;
+}
+
+.container-bottom-footer{
+    height: auto;
+    background-color: #1b1b1b;
+    border-top: 1px solid #65666a;
+    color: #fff;
+    padding: 50px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-mail{
+    height: 45px;
+    width: 220px;
+    border-radius: 5px;
+}
+.container-email{
+    display: flex;
+    flex-wrap: wrap;
+}
+.img-icons-footer{
+    height:35px;
+    width: 35px;
+}
+
+.container-links-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+}
+
+.container-payment{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 15%;
+}
+
