@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
-
+import ImgBottom from './components/ImgBottom/ImgBottom';
 import Footer from './components/Footer/Footer';
 function App() {
   return (
