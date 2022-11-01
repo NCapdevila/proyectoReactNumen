@@ -18,6 +18,8 @@ const NavBar = () => {
         <div className="LogoNavBar__container">
           <span>Vopero</span>
         </div>
+      <div>
+        
         <NavBarLinkContainer estado={showMobileMenu}></NavBarLinkContainer>
         <div  className='nav__icons' onClick={() => setShowMobileMenu(!showMobileMenu)}>
             {
@@ -32,7 +34,8 @@ const NavBar = () => {
 
         <NavBarIcons />
       </div>
+      </div>
     </>
   );
-};
+
 export default NavBar;
