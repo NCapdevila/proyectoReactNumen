@@ -1,36 +1,40 @@
 import NavBarDropDown from "../NavBarDropDown/NavBarDropDown";
 import NavBarIcon from "../NavBarIcons/NavBarIcons";
 import NavBarLink from "../NavBarLink/NavBarLink";
-import { useState } from 'react';
-import {dropDownItemsMens} from '../NavBarDropDown/NavBarDropDownItems';
+import { useState } from "react";
+import {
+  dropDownItemsWoman,
+  dropDownItemsMan,
+} from "../NavBarDropDown/NavBarDropDownItems";
 
 const NavBarLinkContainer = (props) => {
   const [dropdown, setDropdown] = useState(false);
-    return (
-        <>       
-        <div className={`links__container ${props.estado ? 'active' : 'closed'}`}>
-        <li>
+  const [dropdown2, setDropdown2] = useState(false);
+  return (
+    <div>
+      <div className={`links__container ${props.estado ? "active" : "closed"}`}>
+        <div 
+          className="sublinks__container"
+          onMouseEnter={() => setDropdown(true)}
+          onMouseLeave={() => setDropdown(false)}
+        >
           <NavBarLink text="Mujer"></NavBarLink>
-        </li>
-        <li 
-        onMouseEnter={() => setDropdown(true)}
-        onMouseLeave={() => setDropdown(false)}
+          {dropdown && <NavBarDropDown links={dropDownItemsWoman} itsFor='Woman'/>}
+        </div>
+        <div
+          className="sublinks__container"
+          onMouseEnter={() => setDropdown2(true)}
+          onMouseLeave={() => setDropdown2(false)}
         >
           <NavBarLink text="Hombre"></NavBarLink>
-          { dropdown && <NavBarDropDown links={dropDownItemsMens} />}
-        </li>
-        <li>
-          <NavBarLink text="Niños"></NavBarLink>
-        </li>
-        <div className={`mobile__icons ${props.estado ? 'active' : 'closed'}`}>
-            <NavBarIcon />
+          {dropdown2 && <NavBarDropDown links={dropDownItemsMan} itsFor='Man'/>}
+        </div>
+        <div className={`mobile__icons ${props.estado ? "active" : "closed"}`}>
+          <NavBarIcon />
         </div>
       </div>
-      <div className="desktop__icons">
-          <NavBarIcon className='desktop__icons' />
-      </div>
-      </> 
-    )
-}
+    </div>
+  );
+};
 
 export default NavBarLinkContainer;

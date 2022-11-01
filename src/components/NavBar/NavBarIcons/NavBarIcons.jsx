@@ -1,19 +1,12 @@
 
-import { BsFillPersonFill, BsFillCartFill, BsSearch } from "react-icons/bs";
+import { FaUserAlt, FaShoppingCart } from "react-icons/fa";
 
 const NavBarIcon = () => {
   return (
-    <ul className="icons__container">
-      <li>
-        <BsFillPersonFill />
-      </li>
-      <li>
-        <BsFillPersonFill />
-      </li>
-      <li>
-        <BsFillCartFill />
-      </li>
-    </ul>
+    <div className="navicons__container">
+      <a href="#"> <FaShoppingCart /></a>
+      <button><FaUserAlt/></button>
+    </div>
   );
 };
 
