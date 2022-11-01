@@ -1,7 +1,7 @@
 .DetailContainer {
-      line-height: .5rem;
-      padding: 1rem;
-      height: 30%;
+      margin-left: 1rem;
+      margin-top: 1rem;
+      height: auto;
       overflow: hidden;
 }
 

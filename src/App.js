@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
 import ImgBottom from './components/ImgBottom/ImgBottom';
 import Footer from './components/Footer/Footer';
+import CardContainer from './components/card_container/CardContainer';
 function App() {
   return (
 
@@ -15,7 +16,8 @@ function App() {
 
 <CarouselImages></CarouselImages>
         <NavBar></NavBar>
-        <ImgBottom />
+              <ImgBottom />
+              <CardContainer />
         <Footer />
     </div>
   )
