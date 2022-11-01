@@ -1,0 +1,13 @@
+.btn{
+    background-color: #d1bea8;
+    border:none;
+    color: #fff;
+    margin-left: 5px;
+    border-radius: 5px;
+    height: 45px;
+    width: auto;
+}
+
+.btn:hover{
+    background-color: #a19485;
+}
