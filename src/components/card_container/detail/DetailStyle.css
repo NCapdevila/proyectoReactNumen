@@ -1,0 +1,27 @@
+.DetailContainer {
+      line-height: .5rem;
+      padding: 1rem;
+      height: 30%;
+      overflow: hidden;
+}
+
+.DetailBrand {
+ font-weight: 600;
+}
+
+.DetailSize {
+font-size: .9rem;
+}
+
+.DetailPrice {
+font-weight: bold;
+}
+
+.DetailOffer {
+text-decoration: line-through;
+color: rgb(189, 189, 189);
+}
+
+span {
+      font-weight: 400;
+}
