@@ -1,30 +1,19 @@
+import NavBarDropDownItemsContainer from './NavBarDropDownItemsContainer';
 
-import { useState } from 'react';
-import {dropDownItemsMens} from './NavBarDropDownItems';
-
+import {dropDownItemsBrands, dropDownItemsTopSellers, dropDownItemsExtras} from './NavBarDropDownItems'; 
 
 
 const NavBarDropDown = (props) =>{
 
-    const { links } = props;
+    const { links, itsFor } = props;
     return (
         <div className='navbar__dropdown'>
-        <ul>
-            {
-                dropDownItemsMens.map(item =>{
-                    return (
-                        <li className={item.classN} key={item.id}>
-                         {item.nameItem}
-                        </li>
-                    )
-                })
-            }
-
-            
-        </ul>
-        <ul>
-
-        </ul>
+            <div className='DropdownSections__container'>
+                <NavBarDropDownItemsContainer items={links} title='Categoria' />
+                <NavBarDropDownItemsContainer items={dropDownItemsBrands} itsFor= {itsFor} title='Marcas' />
+                <NavBarDropDownItemsContainer items={dropDownItemsTopSellers} itsFor= {itsFor} title='Top-Sellers' />
+                <NavBarDropDownItemsContainer items={dropDownItemsExtras} title='Mas opciones' />
+            </div>
         </div>
     )
 }
