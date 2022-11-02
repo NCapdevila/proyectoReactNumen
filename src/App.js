@@ -13,9 +13,8 @@ function App() {
   return (
 
     <div className="App">
-
-<CarouselImages></CarouselImages>
         <NavBar></NavBar>
+        <CarouselImages></CarouselImages>
         <ImgBottom />
         <Footer />
     </div>

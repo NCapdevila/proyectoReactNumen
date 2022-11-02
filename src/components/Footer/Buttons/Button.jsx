@@ -1,10 +1,12 @@
 import Button from 'react-bootstrap/Button';
 import './Button.css';
 
-function ButtonFooter() {
+function ButtonFooter(props) {
+
+    const { text }  = props
     return (
     <>
-        <Button variant="warning" bsPrefix="btn">Suscribirse</Button>{' '}
+        <Button variant="warning" bsPrefix="btn">{text}</Button>{' '}
     </>
     );
 }

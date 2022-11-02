@@ -6,7 +6,6 @@ import {dropDownItemsBrands, dropDownItemsTopSellers, dropDownItemsExtras} from 
 const NavBarDropDown = (props) =>{
 
     const { links, itsFor } = props;
-    console.log(itsFor);
     return (
         <div className='navbar__dropdown'>
             <div className='DropdownSections__container'>
