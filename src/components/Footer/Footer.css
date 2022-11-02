@@ -18,6 +18,7 @@ html, body{
 }
 ul{
     margin: 0;
+    padding: 0;
 }
 
 .col{
@@ -91,7 +92,7 @@ ul{
     width: 15%;
 }
 
- @media (max-width: 576px){
+ @media (max-width: 1024px){
     .container-footer {
         height: 100%;
         flex-direction:column;
@@ -140,6 +141,7 @@ ul{
         width: 20px;
         margin: 0px 5px 0px 5px;
     }
+    
 
 
 }
