@@ -7,7 +7,7 @@ const NavBarIcon = () => {
     <div className="navicons__container">
       <a href="#"> <FaShoppingCart /></a>
       <button><FaUserAlt/></button>
-      <Button className='buttonNavBar' text='Vender'/>
+      <Button style='btn-nav' text='Vender'/>
     </div>
   );
 };

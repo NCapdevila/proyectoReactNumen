@@ -2,6 +2,7 @@
 
 html, body{
     font-family: 'Roboto Slab', serif;
+    
 }
 
 .container-footer{
@@ -120,7 +121,7 @@ ul{
         justify-content: left;
         
     }
-   .container-list-info ul {
+    .container-list-info ul {
         padding: 0px;
     }
 

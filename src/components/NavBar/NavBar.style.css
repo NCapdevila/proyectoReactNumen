@@ -65,10 +65,7 @@
     background-color: rgb(255, 255, 255);
     color: #1b1b1b;
 }
-.btn{
-    background-color: #1b1b1b !important;
-    color: #fff !important;
-}
+
 .navicons__container{
     display: flex;
     justify-content: space-between;
