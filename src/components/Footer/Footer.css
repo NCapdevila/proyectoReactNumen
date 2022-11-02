@@ -5,7 +5,8 @@ html, body{
 }
 
 .container-footer{
-    height: 280px;
+    max-width: 100vw;
+    height: 300px;
     background-color: #1b1b1b;
     color: #fff;
     display: flex;
@@ -37,7 +38,7 @@ ul{
 }
 
 .container-list-info{
-    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -90,3 +91,55 @@ ul{
     width: 15%;
 }
 
+ @media (max-width: 576px){
+    .container-footer {
+        height: 100%;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .col{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+    }
+    .container-novedades{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-email{
+        justify-content: center;
+    }
+
+    .container-list-info ul{
+        width: 100%;
+        justify-content: left;
+        
+    }
+   .container-list-info ul {
+        padding: 0px;
+    }
+
+    .container-bottom-footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .container-links-footer, .container-payment{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 20px;
+    }
+    .img-icons-footer{
+        height:20px;
+        width: 20px;
+        margin: 0px 5px 0px 5px;
+    }
+
+
+}
