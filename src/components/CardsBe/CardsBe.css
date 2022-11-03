@@ -1,24 +1,42 @@
+.title {
+    width: 100%;
+    height: 60px; 
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+
 .containerCard {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-items: center;
-    background-color: blue;
+    flex-wrap: wrap;
 }
 
+.imgcard { 
+    height: 90px;
+    width: 90px;
+}
+.title {
+    text-align: center;
+}
 .card {
-    width: auto;
+    height: 330px;
+    width:300px;
     border: none;
     color:dimgray;
+    justify-items: center;
+    align-items: center;
+    padding:10px;
+    margin:auto;
 }
 
-.cardtitle {
-    align-items: center;
-    justify-items: center;
-    background-color: blue;
+.cardTitle {
+    text-align: center;
 }
 
 .cardtext {
-    height: 163px;
+    text-align: justify;
     font-size: 16px;
 }
