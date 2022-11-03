@@ -13,6 +13,7 @@ html, body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    
     padding: 50px 20px 20px;
     font-size: 0.9rem;
     
@@ -28,6 +29,7 @@ ul{
     flex-direction:column;
     flex-wrap: wrap;
     list-style: none;
+    
 }
 
 .container-list{
@@ -37,6 +39,9 @@ ul{
     flex-direction: column;
     flex-wrap: wrap;
     list-style: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .container-list-info{
@@ -45,6 +50,8 @@ ul{
     flex-direction: column;
     flex-wrap: wrap;
     list-style: none;
+    justify-content: center;
+    align-items: center;
     margin: 0px 0px 20px 0px;
 }
 .li-info:hover{
@@ -68,29 +75,33 @@ ul{
     height: 45px;
     width: 220px;
     border-radius: 5px;
+    
 }
 .container-email{
     display: flex;
     flex-wrap: wrap;
 }
-.img-icons-footer{
-    height:35px;
-    width: 35px;
-}
 
 .container-links-footer{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 20%;
+}
+.container-seguinos{
+    padding: 0px 20px 0px 0px;
+    
+}
+.container-icons-footer{
+    padding: 0px 20px 0px 0px;
 }
 
 .container-payment{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 15%;
+    width: 10%;
 }
 
  @media (max-width: 1024px){
@@ -110,10 +121,13 @@ ul{
         height: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        
     }
 
     .container-email{
         justify-content: center;
+        align-items: center;
     }
 
     .container-list-info ul{
@@ -125,24 +139,32 @@ ul{
         padding: 0px;
     }
 
-    .container-bottom-footer{
+    .container-bottom-footer, .container-seguinos{
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
     }
-    .container-links-footer, .container-payment{
-        width: 100%;
+
+    .container-icons-footer{
+        display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px 20px;
-    }
-    .img-icons-footer{
-        height:20px;
-        width: 20px;
-        margin: 0px 5px 0px 5px;
     }
     
 
+    .container-links-footer, .container-seguinos, .container-icons-footer{
+        width: 100%;
+        padding: 0;
+    }
+    .container-icons-footer, .container-payment{
+        padding: 10px 0px 20px 0px;
+    }
+    .container-icons-footer a{
+        padding: 2px;
+    }
+    .container-payment{
+        width: 30%;
+    }
 
 }
