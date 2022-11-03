@@ -8,15 +8,11 @@ import CardsBe from './components/CardsBe/CardsBe';
 
 function App() {
   return (
-
-    <div className="App">
-        <NavBar></NavBar>
-    <div>
-    <h1>Descubrí más sobre nosotros</h1>
+<div className="App">
+    <NavBar></NavBar>
     <CardsBe />
-    </div>
-      <ImgBottom />
-      <Footer />
+    <ImgBottom />
+    <Footer />
     </div>
   )
 }
