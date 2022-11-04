@@ -1,7 +1,7 @@
 .CardStyle {
 background-color: rgb(120, 174, 69);
 width: 16rem;
-height: 27rem;
+height:25.5rem;
 display: flex;
 flex-direction: column;
 }

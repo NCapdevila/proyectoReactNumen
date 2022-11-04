@@ -2,9 +2,10 @@
 .LogoStyle {
       display: flex;
       align-items: center;
-      padding-left: 1rem;
+      padding: .7rem;
       gap: 1rem;
       font-size: .8rem;
+    
 }
 
 .LogoImg {
@@ -13,6 +14,7 @@
       border-radius: 50%;
 }
 
-.LogoStyle p{
+.LogoP{
       font-weight: 500;
+      margin-bottom: 0;
 }

@@ -45,6 +45,15 @@ const CardContainer = (props) => {
                   price: 3890,
                   offerNumber: 40,
             },
+            {
+                  user: "NumenAc",
+                  imageRoot: 5,
+                  offer: true,
+                  brand: 'Adidas shirt',
+                  size: 'Talla S',
+                  price: 1000,
+                  offerNumber: 40,
+            },
 
       ];
 
@@ -59,12 +68,7 @@ const CardContainer = (props) => {
                         )}
                   </div>
 
-                  <Header title={headerContainer} />
-                  <div className='cardContainer'>
-                        {sales.map(numb =>
-                              <Card sale={numb} />
-                        )}
-                  </div>
+
             </>
 
       )
