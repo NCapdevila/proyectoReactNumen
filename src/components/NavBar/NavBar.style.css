@@ -65,6 +65,23 @@
     color: #989BA0;
 }
 
+
+.navBarHeader__container{
+    background-color: #1b1b1b;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.navBarHeaderItem__container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 /* FIN ESTILOS NAVBAR COMPLETO */
 
 /* ESTILOS PARA ICONS DEL NAVBAR */

@@ -1,9 +1,10 @@
 import './NavBar.style.css'
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import { FaBars } from 'react-icons/fa'
+import { FaBars} from 'react-icons/fa'
 import NavBarLinkContainer from "./NavBarLinkContainer/NavBarLinkContainer";
 import NavBarIcons from "./NavBarIcons/NavBarIcons";
+import NavBarHeader from './NavBarHeader/NavBarHeader';
 
 
 
@@ -15,6 +16,7 @@ const NavBar = () => {
   return (
     
     <>
+      <NavBarHeader />
       <div className="navBar__Container">
         <div className="LogoNavBar__container">
           <span>Vopero</span>
