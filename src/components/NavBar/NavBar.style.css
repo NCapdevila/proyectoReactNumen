@@ -231,6 +231,15 @@
     color: #1b1b1b;
 }
 
+.backgroundDropdown{
+    position: fixed;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(75, 74, 74, 0.644);
+}
+
 /* FIN ESTILOS PARA EL DROPDOWN */
 
 /* ESTILOS PARA OCULTAR DIV QUE PERTENECEN AL MENU MOBILE */

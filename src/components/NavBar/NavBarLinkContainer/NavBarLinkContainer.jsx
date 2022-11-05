@@ -43,9 +43,8 @@ const NavBarLinkContainer = (props) => {
           onMouseLeave={() => setDropdown(false)}
         >
           <NavBarLink text="Mujer"></NavBarLink>
-          {dropdown && (
-            <NavBarDropDown links={dropDownItemsWoman} itsFor="Woman" />
-          )}
+          {dropdown && <div onMouseEnter={() => setDropdown(false)} className="backgroundDropdown"></div>} 
+          {dropdown && (<NavBarDropDown links={dropDownItemsWoman} itsFor="Woman" />)}
         </div>
         <div
           className="sublinks__container"
@@ -53,9 +52,8 @@ const NavBarLinkContainer = (props) => {
           onMouseLeave={() => setDropdown2(false)}
         >
           <NavBarLink text="Hombre"></NavBarLink>
-          {dropdown2 && (
-            <NavBarDropDown links={dropDownItemsMan} itsFor="Man" />
-          )}
+          {dropdown2 && <div onMouseEnter={() => setDropdown2(false)} className="backgroundDropdown"></div>} 
+          {dropdown2 && (<NavBarDropDown links={dropDownItemsMan} itsFor="Man" />)}
         </div>
         
         <div className="listLinksMobileVersion__container">
