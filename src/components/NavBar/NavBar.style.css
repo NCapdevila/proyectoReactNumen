@@ -17,6 +17,10 @@
     z-index: 100;
 }
 
+.navbar_fixed{
+    top: 0;
+}
+
 .links__navbar {
     text-decoration: none;
 }
@@ -175,7 +179,7 @@
     max-height: 390px;
     justify-content: center;
     cursor: default;
-    z-index: 33;
+    z-index: 100;
     background-color: #fff;
 
 }
@@ -316,12 +320,13 @@
         min-width: 100%;
         top: 70px;
         left: -140%;
+
         position: absolute;
         justify-content: center;
         align-items: center;
         background-color: rgb(255, 255, 255);
         transition: 0.4s left ease-in-out;
-        z-index: 2;
+        z-index: 33;
     }
 
     .links__container a {
@@ -430,11 +435,11 @@
         flex-flow: nowrap column;
         justify-content: flex-start;
         overflow: visible;
-        background-color: #efefef;
+        background-color: #dfe2e2;
     }
 
     .linkdeploy {
-        background-color: #efefef;
+        background-color: #dfe2e2;
         margin: 0;
         padding: 0px 25px;
         width: 100%;
@@ -444,7 +449,7 @@
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        background-color: #efefef;
+        background-color: #dfe2e2;
     }
 
     /* FIN ESTILOS PARA ITEMS DEL MENU MOBILE */
@@ -483,7 +488,9 @@
         justify-content: space-between;
         align-items: center;
     }
-
+    .navBarHeader__container{
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
