@@ -1,0 +1,20 @@
+
+.LogoStyle {
+      display: flex;
+      align-items: center;
+      padding: .7rem;
+      gap: 1rem;
+      font-size: .8rem;
+    
+}
+
+.LogoImg {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+}
+
+.LogoP{
+      font-weight: 500;
+      margin-bottom: 0;
+}
