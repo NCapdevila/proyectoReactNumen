@@ -2,7 +2,7 @@
       margin-left: 1rem;
       margin-top: 1rem;
       height: auto;
-      overflow: hidden;
+     position: relative;
 }
 
 .DetailBrand {
@@ -19,9 +19,13 @@ font-weight: bold;
 
 .DetailOffer {
 text-decoration: line-through;
-color: rgb(189, 189, 189);
+color: rgb(230, 81, 81);
 }
 
 span {
       font-weight: 400;
+}
+.Absolute {
+      position: absolute;
+      right: 15px;
 }
