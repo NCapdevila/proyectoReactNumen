@@ -1,5 +1,4 @@
 import NavBarDropDown from "../NavBarDropDown/NavBarDropDown";
-import NavBarIcon from "../NavBarIcons/NavBarIcons";
 import NavBarLink from "../NavBarLink/NavBarLink";
 import { useState } from "react";
 import { dropDownItemsWoman,dropDownItemsMan } from "../NavBarDropDown/NavBarDropDownItems";
@@ -86,7 +85,7 @@ const NavBarLinkContainer = (props) => {
             onClick={() => {
               setMenuMobileDropDownWoman(!menuMobileDropDownWoman);
             }}
-            className="sublinkMobile__container"
+            className={`sublinkMobile__container arrowmobile_container ${menuMobileDropDownWoman ? 'linkdeploy' : 'linkdeployclosed'}`}
           >
             <NavBarLink
               text={`Mujer`}
@@ -98,12 +97,15 @@ const NavBarLinkContainer = (props) => {
           <NavBarDropDownMobileMenu
             links={dropDownItemsWoman}
             estado={menuMobileDropDownWoman}
+            itsFor='Woman'
           />
           <div
             onClick={() => {
               setMenuMobileDropDownMan(!menuMobileDropDownMan);
             }}
-            className="sublinkMobile__container"
+            
+            className={`sublinkMobile__container arrowmobile_container ${menuMobileDropDownMan ? 'linkdeploy' : 'linkdeployclosed'}`}
+           
           >
             <NavBarLink text={`Hombre`}></NavBarLink>
             {
@@ -113,8 +115,9 @@ const NavBarLinkContainer = (props) => {
           <NavBarDropDownMobileMenu
             links={dropDownItemsMan}
             estado={menuMobileDropDownMan}
+            itsFor='Man'
           />
-          <div className="sublinkMobile__container">
+          <div className="sublinkMobile__container vendermobile__container">
             <NavBarLink text="Vender"></NavBarLink>
           </div>
           <div className="sublinkMobile__container userLogin">
