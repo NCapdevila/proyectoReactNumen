@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    height: 75px;
+    height: 80px;
     width: 100%;
     position: fixed;
     z-index: 100;
@@ -251,7 +251,7 @@
 .backgroundDropdown{
     position: fixed;
     left: 0;
-    top: 100px;
+    top: 120px;
     width: 100%;
     height: 100%;
     background-color: rgba(75, 74, 74, 0.644);
