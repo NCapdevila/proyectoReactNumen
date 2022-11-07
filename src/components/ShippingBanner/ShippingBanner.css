@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&family=Roboto+Slab&display=swap');
+
+.list-banner{
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Roboto Slab', serif;
+    box-sizing: border-box;
+    padding: 2rem 0rem 2rem 0rem;
+}
+.item-banner{
+    display: flex;
+    width: 25%;
+}
+.icon-container{
+    align-self: center;
+    width: 30%;
+}
+.container{
+    border-left: 2px solid black;
+    align-self: center;
+}
+.icons{
+    width: 2.5rem;
+    margin-left: 2rem;
+}
+
+.tite-banner{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.paragraph-banner{
+    font-size: 1rem;
+    color:grey;
+}
+
