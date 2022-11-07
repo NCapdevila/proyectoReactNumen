@@ -11,7 +11,9 @@ function Footer(){
             <div className='container-footer'>
             <div className='col'>
                 <div className='container-novedades'>
-                <p>Para recibir novedades y beneficios sumate a nuestra comunidad</p>
+                <div className='container-texto-novedades'>
+                Para recibir novedades y beneficios sumate a nuestra comunidad
+                </div>
                 <div className='container-email'>
                 <input type="email" placeholder='Ingresa tu correo electrónico' className='input-mail' />
                 <ButtonFooter text="Suscribirme" style="btn-footer" ></ButtonFooter>
