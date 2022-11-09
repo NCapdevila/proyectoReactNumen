@@ -7,6 +7,11 @@ import Footer from './components/Footer/Footer';
 import CardsBe from './components/CardsBe/CardsBe';
 import CarouselImages from './components/CarouselImages/CarouselImages';
 import CardContainer from './components/card_container/CardContainer';
+import SwiperIg from './components/SwiperIg/SwiperIg';
+
+/*import "swiper/css/bundle";*/
+
+
 
 function App() {
   return (
@@ -15,6 +20,7 @@ function App() {
     <CarouselImages />
     <CardContainer></CardContainer>
     <CardsBe />
+    <SwiperIg> </SwiperIg>
     <ImgBottom />
     <Footer />
     </div>

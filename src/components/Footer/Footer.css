@@ -163,3 +163,23 @@ ul{
     }
 
 }
+
+@media (max-width: 480px){
+    .container-texto-novedades{
+        text-align: center;
+        
+    }
+    .container-email{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn-footer{
+        width: 220px;
+        margin: 0;
+    }
+    .container-list-info, .container-copy{
+        text-align: center;
+    }
+    
+    
+}
