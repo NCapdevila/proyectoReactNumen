@@ -36,7 +36,7 @@ function Footer(){
             <div className='col'>
                 
                 <ul className='container-list-info'>
-                    <li>Atención personalizada o consultas, contactanos:</li>
+                    <li>Atención personalizada:</li>
                 </ul>
                 <ul className='container-list-info'>
                     <li><FaWhatsapp /> +598 96 300 060</li>

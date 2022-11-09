@@ -8,10 +8,9 @@
     flex-direction: column;
 }
 .container-texto{
-    
     display: flex;
     flex-direction: column;
-    padding: 90px 0px;
+    padding: 70px 0px;
 }
 
 .texto1, .texto2{
