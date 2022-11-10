@@ -1,5 +1,9 @@
+import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-
+import './CarouselImages.css'
+import banner_1_Desktop from './images/banner_1_Desktop.png';
+import banner_2_Desktop from './images/banner_2_Desktop.png';
+import banner_3_Desktop from './images/banner_3_Desktop.png';
 
 
 function CarouselImages() {
@@ -8,9 +12,8 @@ function CarouselImages() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src= "./images/banner_1_1350.png"
-          alt="First slide"
-        />
+          src= {banner_1_Desktop}
+          alt="First slide"/>
         <Carousel.Caption>
           <h3 className='title'>Mujeres</h3>
           <p className='paragraph'>Las mejores marcas y precios</p>
@@ -19,9 +22,8 @@ function CarouselImages() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/banner_2_1350.png"
-          alt="Second slide"
-        />
+          src={banner_2_Desktop}
+          alt="Second slide"/>
 
         <Carousel.Caption>
           <h3 className='title'>Hombres</h3>
@@ -31,9 +33,8 @@ function CarouselImages() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/banner_3_1350.png"
-          alt="Third slide"
-        />
+          src= {banner_3_Desktop}
+          alt="Third slide"/>
         <Carousel.Caption>
           <h3 className='title'>Recirculá</h3>
           <p className='paragraph'>
