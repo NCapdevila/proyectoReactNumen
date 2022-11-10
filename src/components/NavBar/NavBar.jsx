@@ -1,9 +1,10 @@
 import './NavBar.style.css'
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import { FaBars } from 'react-icons/fa'
+import { FaBars} from 'react-icons/fa'
 import NavBarLinkContainer from "./NavBarLinkContainer/NavBarLinkContainer";
 import NavBarIcons from "./NavBarIcons/NavBarIcons";
+import NavBarHeader from './NavBarHeader/NavBarHeader';
 
 
 
@@ -11,11 +12,21 @@ import NavBarIcons from "./NavBarIcons/NavBarIcons";
 const NavBar = () => {
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [fixed, setFixed] = useState(false);
 
+  const setFix = () =>{
+    if(window.scrollY >= 1){
+      setFixed(true);
+    } else {
+      setFixed(false);
+    }
+  };
+  window.addEventListener("scroll", setFix);
   return (
     
     <>
-      <div className="navBar__Container">
+      <NavBarHeader />
+      <div className={`navBar__Container ${fixed ? 'navbar_fixed' : 'navbar_notfixed'}`}>
         <div className="LogoNavBar__container">
           <span>Vopero</span>
         </div>

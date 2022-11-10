@@ -12,6 +12,7 @@ function Card(props) {
                         <Logo user={props.sale.user} />
                         <ImageCard sale={props.sale} />
                         <Detail sale={props.sale} />
+                        
                   </div>
             </a>
 

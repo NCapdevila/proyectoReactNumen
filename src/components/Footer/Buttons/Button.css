@@ -5,7 +5,7 @@
     margin-left: 5px;
     border-radius: 5px;
     height: 45px;
-    width: 200x;
+    width: 6rem;
     cursor: pointer;
     user-select: none;
 }
@@ -17,5 +17,4 @@
 .btn-nav{
     background-color:#1b1b1b !important;
     color: #fff !important;
-    border-radius: 5px;
 }

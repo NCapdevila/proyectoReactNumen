@@ -1,9 +1,10 @@
 .CardStyle {
-background-color: rgb(120, 174, 69);
+background-color: rgb(190, 194, 187);
 width: 16rem;
-height: 27rem;
+height:25.5rem;
 display: flex;
 flex-direction: column;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 a {

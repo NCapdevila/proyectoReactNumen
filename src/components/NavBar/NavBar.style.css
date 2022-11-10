@@ -1,84 +1,125 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&family=Roboto+Slab&display=swap');
+
+* {
     box-sizing: border-box;
-    list-style: none;    
+    list-style: none;
 }
-.navBar__Container{
+
+/* ESTILOS NAVBAR COMPLETO */
+.navBar__Container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    height: 75px;
+    height: 80px;
     width: 100%;
-    
+    position: fixed;
+    z-index: 100;
 }
-.links__navbar{
+
+.navbar_fixed{
+    top: 0;
+}
+
+.links__navbar {
     text-decoration: none;
 }
-.LogoNavBar__container{
+
+.LogoNavBar__container {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 12px;
     margin-left: 50px;
 }
-.searchNavBar__container{
-    border-radius: 4px;
-    position: relative;
-    border: 1px solid gray;
+
+.btn-nav {
+    height: 50px;
+    width: 100px;
+
 }
-.searchNavBar__container svg{
-    margin-right: 10px;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    margin-left: 5px;
+
+.btn-nav:hover {
+    background-color: rgb(143, 143, 143) !important;
 }
-.inputNavBar{
+
+.userIconNavBar:hover {
+    color: rgb(39, 42, 211);
+}
+
+
+
+.inputNavBar {
     padding: 10px 60px 10px 40px;
     outline: none;
 }
 
-.inputNavBar::placeholder{
+.inputNavBar::placeholder {
     color: #989BA0;
 }
 
 
-.links__container{
+.navBarHeader__container{
+    background-color: #1b1b1b;
+    color: white;
     display: flex;
     justify-content: space-evenly;
+    height: 40px;
     align-items: center;
-    min-width: 50%;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 
-.lateralNavBar__container{
+.navBarHeaderItem__container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* FIN ESTILOS NAVBAR COMPLETO */
+
+/* ESTILOS PARA ICONS DEL NAVBAR */
+.lateralNavBar__container {
     display: flex;
     gap: 20px;
     min-width: 40%;
     margin-left: 200px;
     justify-content: center;
 }
-.nav__icons{
+
+.nav__icons {
     margin-right: 40px;
     display: none;
 }
 
-.navicons__container button{
+.navicons__container button {
     background-color: rgb(255, 255, 255);
     color: #1b1b1b;
 }
 
-.navicons__container{
+.navicons__container {
     display: flex;
     justify-content: space-between;
     min-width: 175px;
     height: 45px;
     font-size: 1.4rem;
 }
-.navicons__container a{
+
+.navicons__container a {
     text-decoration: none;
     color: #1b1b1b;
     align-self: center;
 }
-.sublinks__container{
+
+/* FIN ESTILOS ICONS NAVBAR */
+
+/* ESTILOS PARA LAS PERSONAS (MUJER Y HOMBRE) */
+.links__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 50%;
+}
+
+.sublinks__container {
     list-style: none;
     padding: 20px;
     margin: 0px 30px;
@@ -87,30 +128,34 @@
     text-align: center;
 }
 
-.sublinks__container a{
+.sublinks__container a {
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
-.icons__container{
+
+.icons__container {
     display: flex;
     align-items: center;
     justify-items: center;
     gap: 10px;
     margin-right: 20px;
 }
-.icons__container > li{
+
+.icons__container>li {
     list-style: none;
     border-radius: 50%;
     border: 1px solid rgb(54, 54, 54);
     padding: 15px;
 }
 
-.mobile__icons{
+.mobile__icons {
     display: none;
 }
 
+/* FIN ESTILOS HOMBRE Y MUJER */
 
-.navbar__dropdown{
+/* ESTILOS PARA EL DROPDOWN DE HOMBRE Y MUJER */
+.navbar__dropdown {
     display: flex;
     width: 100%;
     position: absolute;
@@ -122,11 +167,12 @@
     max-height: 390px;
     justify-content: center;
     cursor: default;
-    z-index: 33;
+    z-index: 100;
     background-color: #fff;
 
 }
-.DropdownSections__container{
+
+.DropdownSections__container {
     display: flex;
     gap: 100px;
     height: 100%;
@@ -134,17 +180,17 @@
     justify-content: space-between;
 }
 
-.navBarItems__Container{
-    width: 160px;
+.navBarItems__Container {
+    width: 120vh;
     background-color: #fff;
     display: flex;
     flex-flow: wrap column;
     align-items: flex-start;
     justify-content: flex-start;
-    
+
 }
 
-.navBarItems__Container  > ul{
+.navBarItems__Container>ul {
     padding: 0;
     display: block;
     list-style-type: disc;
@@ -156,7 +202,7 @@
     justify-content: flex-start;
 }
 
-.dropdown__item{
+.dropdown__item {
     list-style-type: none;
     cursor: pointer;
     margin: 8px 0px;
@@ -165,10 +211,12 @@
     font-weight: 200;
     font-size: 1em;
 }
-.dropdown__item:hover{
+
+.dropdown__item:hover {
     color: #989BA0;
 }
-.title__dropdown{
+
+.title__dropdown {
     width: 100%;
     padding-left: 10px;
     text-align: center;
@@ -178,9 +226,10 @@
     margin: 0;
     letter-spacing: .02em;
     color: #1b1b1b;
-    
+
 }
-.vermas__container{
+
+.vermas__container {
     width: 100%;
     padding-left: 10px;
     font-weight: 500;
@@ -190,175 +239,245 @@
     letter-spacing: .02em;
     color: #1b1b1b;
 }
-.sublinkMobile__container{
-    display: none;
+
+.backgroundDropdown{
+    position: fixed;
+    left: 0;
+    top: 120px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(75, 74, 74, 0.644);
 }
-.navBarDropDownMobileMenu__container{
-    display: none;
-}
-.mobilesearch{
+
+/* FIN ESTILOS PARA EL DROPDOWN */
+
+/* ESTILOS PARA OCULTAR DIV QUE PERTENECEN AL MENU MOBILE */
+.sublinkMobile__container {
     display: none;
 }
 
-@media (max-width: 992px){
-    .nav__icons{
+.navBarDropDownMobileMenu__container {
+    display: none;
+}
+
+.mobilesearch {
+    display: none;
+}
+
+/* FIN ESTILOS DESKTOP */
+
+@media (max-width: 1200px) {
+
+    /* ESTILOS PARA ICONS MOBILE */
+    .nav__icons {
         display: flex;
         align-items: center;
         font-size: 35px;
     }
-    ul{
-        justify-content: space-between;
-    }
-    .links__container{
-        display: flex;
-        flex-flow: nowrap column;
-        height: 100vh;
-        min-width: 100%;
-        top: 70px;
-        left: -140%;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(255, 255, 255);
-        transition: 0.4s left ease-in-out;
-        z-index: 2;
-    }
-    .links__container a{
-        color: rgb(100, 99, 99);
-        font-weight: 100;
-    }
-    .links__container.active{
-        left: 0;    
-        transition: 0.5s ease-in-out all;
-    }
 
-    .desktop__icons{
+    .desktop__icons {
         display: none;
     }
-    .mobile__icons.active{
+
+    .mobile__icons.closed {
+        display: none;
+    }
+
+    .mobile__icons.active {
         display: flex;
         color: white;
         margin-top: 20px;
         height: 100px;
         align-items: center;
     }
-    .mobile__icons.closed{
-        display: none;
-    }
-    .lateralNavBar__container{
-        display: none;
-    }
-    .searchNavBar__container{
-        
-        display: flex;
-        justify-content: center;
-    }
-    .searchNavBar__container > input{
-        text-align: center;
+
+    /*  FIN ESTILOS ICONS MOBILE */
+    ul {
+        justify-content: space-between;
     }
 
-    .sublinks__container{
+    .lateralNavBar__container {
         display: none;
     }
-    .listLinksMobileVersion__container{
+
+    /* ESTILOS PARA EL CONTENEDOR DEL MENU MOBILE */
+    .links__container {
+        display: flex;
+        flex-flow: nowrap column;
+        height: 100vh;
+        min-width: 100%;
+        top: 70px;
+        left: -140%;
+
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        transition: 0.4s left ease-in-out;
+        z-index: 33;
+    }
+
+    .links__container a {
+        color: rgb(100, 99, 99);
+        font-weight: 100;
+    }
+
+    .links__container.active {
+        left: 0;
+        transition: 0.5s ease-in-out all;
+    }
+
+
+    .sublinks__container {
+        display: none;
+    }
+
+    .listLinksMobileVersion__container {
         display: flex;
         height: 100vh;
         border-radius: 4px;
         box-shadow: 1px 1px 1px 0 #bbbdc1;
         position: absolute;
-        background: #fff;
+        background: #ffffff;
         top: 41px;
         left: 0;
         width: 100%;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
     }
-    .linkMobileContent_container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: calc(100vh - 116px);
-    overflow-y: auto;
-    }
-    
-    .sublinkMobile__container{
-        width: calc(100% - 20px);
-        height: 80px;
-        text-align: center;
-        display: flex;
-        text-align: right;
-        cursor: pointer;
-        padding: 15px 20px;
 
-    }
-    .navBarDropDownMobileMenu__container.closed{
-        height: 0px;
-        overflow: hidden;
-    }
-    .navBarDropDownMobileMenu__container.active{
-        color: rgb(0, 0, 0);
-        background-color: white;
+    .linkMobileContent_container {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        height: 100vh;
-        transition: height 0.5s;
-        overflow: visible;
+        height: calc(100vh - 116px);
+        overflow-y: auto;
     }
-    .navBarDropDownMobileMenu__container.active{
-        padding: 20px;
-        display: flex;
-        flex-flow: nowrap column;
-        width: 80%;
-        
-    }
-    .dropdown__item{
-        display: flex;
-        text-align: right;
-        cursor: pointer;
-        padding: 15px 20px;
-        justify-content: space-between;
-    }
-    .showContent{
-        display: block;
-    }
-    .disableContent{
-        display: none;
-    }
-    .vermas__container{
-        display: none;
-    }
-    .userLogin{
+
+    .userLogin {
         display: flex;
         flex-flow: wrap;
         align-items: center;
         gap: 0px 10px;
     }
-    .userLoginIcon{
+
+    .userLoginIcon {
         display: flex;
         align-items: center;
         font-size: 1.1em;
     }
-    .itemMenuMobile_container{
+
+    .itemMenuMobile_container {
         display: flex;
         text-align: right;
         cursor: pointer;
-        border-bottom: 1px solid #f3f5f8;
-        padding: 15px 56px;
+        width: 100%;
+
+        padding: 15px 27.5px;
         justify-content: space-between;
     }
-    .iconarrow{
+
+    /* FIN ESTILOS MENU CONTAINER MOBILE */
+
+    /* ESTILOS PARA LOS DROPDOWN DE CADA ITEM DEL MENU */
+    .sublinkMobile__container {
+        width: calc(100% - 20px);
+        text-align: center;
+        display: flex;
+        text-align: right;
+        cursor: pointer;
+        min-height: 100px;
+        width: 95%;
+        margin: 0px 10px;
+    }
+
+    .vendermobile__container {
         display: flex;
         align-items: center;
-        height: 50%;
-        margin-left: 10px;
-        color: #989BA0;
     }
-    .iconarrow2{
+
+    .navBarDropDownMobileMenu__container.closed {
+        height: 0px;
+        overflow: hidden;
+    }
+
+    .navBarDropDownMobileMenu__container.active {
+        color: rgb(0, 0, 0);
+        padding: 10px 0px;
         display: flex;
-        align-items: center;
-        height: 100%;
-        margin-left: 10px;
-        color: #989BA0;
+        width: 100%;
+        flex-flow: nowrap column;
+        justify-content: flex-start;
+        overflow: visible;
+        background-color: #dfe2e2;
     }
+
+    .linkdeploy {
+        background-color: #dfe2e2;
+        margin: 0;
+        padding: 0px 25px;
+        width: 100%;
+    }
+
+    .navBarItems__Container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        background-color: #dfe2e2;
+    }
+
+    /* FIN ESTILOS PARA ITEMS DEL MENU MOBILE */
+
+    /* ESTILOS PARA EL SUBDROPDOWN DE CADA ITEM */
+    .dropdown__item {
+        display: flex;
+        text-align: right;
+        cursor: pointer;
+        padding: 15px 20px;
+        justify-content: space-between;
+    }
+
+    .showContent {
+        display: block;
+    }
+
+    .disableContent {
+        display: none;
+    }
+
+    .vermas__container {
+        display: none;
+    }
+
+    .dropdown__item {
+        width: 100vh;
+        margin: 5px 40px;
+    }
+
+    /* FIN ESTILOS SUBDROPDOWN */
+
+    /* ESTILO PARA LAS ARROWS DE LOS ITEMS */
+    .arrowmobile_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navBarHeader__container{
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .LogoNavBar__container {
+        margin: 0;
+        margin-bottom: 10px;
+        margin-left: 15px;
+    }
+
+    .nav__icons {
+        margin: 0;
+        margin-right: 15px;
+    }
+
+
 }

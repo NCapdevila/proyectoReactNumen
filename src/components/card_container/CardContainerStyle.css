@@ -1,7 +1,7 @@
 .cardContainer {
       height: auto;
       width: 100%;
-      background-color: rgb(206, 206, 206);
+      background-color: #fff;
       display: flex;
       margin-top: 1rem;
       align-items: center;
@@ -9,4 +9,8 @@
       gap: .5rem;
       flex-wrap: wrap;
       padding: 2rem 0;
+}
+
+p {
+      margin-bottom: 0;
 }

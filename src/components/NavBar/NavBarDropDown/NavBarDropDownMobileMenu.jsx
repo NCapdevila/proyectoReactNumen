@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import {dropDownItemsBrands, dropDownItemsTopSellers, dropDownItemsExtras} from './NavBarDropDownItems'; 
+import ArrowMobile from './ArrowMobile';
+import {dropDownItemsBrands, dropDownItemsTopSellers , dropDownItemsExtras} from './NavBarDropDownItems'; 
 import NavBarDropDownItemsContainer from './NavBarDropDownItemsContainer';
 
 const NavBarDropDownMobileMenu = (props) =>{
     const { links, itsFor } = props;
     const [selected, setSelected] = useState(null);
-
+ 
     const toggle= (index) =>{
         if(selected === index){
             return setSelected(null);
+            
         }
         setSelected(index);
     }
@@ -23,7 +25,7 @@ const NavBarDropDownMobileMenu = (props) =>{
         },
         {
             nameItem : 'Top Sellers',
-            item:  <NavBarDropDownItemsContainer items={dropDownItemsTopSellers} itsFor= {itsFor} />
+            item: <NavBarDropDownItemsContainer items={dropDownItemsTopSellers} itsFor= {itsFor}/>
         },
         {
             nameItem : 'Mas opciones',
@@ -39,8 +41,9 @@ const NavBarDropDownMobileMenu = (props) =>{
                     nameItems.map((item, index) =>{
                         return(
                         <>
-                        <div className='itemMenuMobile_container' onClick={() => toggle(index)}>
+                        <div className='itemMenuMobile_container'  onClick={() => {toggle(index)}}>
                             <li key={index}>{item.nameItem}</li>
+                            <ArrowMobile state={selected === index ? true : false}/>
                         </div>
                         <div className={`${selected === index ? 'showContent' : 'disableContent'}`}>
                             {item.item}

@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&family=Roboto+Slab&display=swap');
-
-html, body{
-    font-family: 'Roboto Slab', serif;
-    
-}
 
 .container-footer{
     max-width: 100vw;
@@ -12,8 +6,7 @@ html, body{
     color: #fff;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    padding: 50px 20px 20px;
+    padding: 50px 20px 50px 20px;
     font-size: 0.9rem;
     
 }
@@ -25,9 +18,15 @@ ul{
 .col{
     height: 100%;
     display: flex;
-    flex-direction:column;
     flex-wrap: wrap;
+    justify-content: space-around;
     list-style: none;
+    
+}
+
+
+.container-texto-novedades{
+    margin-bottom: 1.0rem;
 }
 
 .container-list{
@@ -37,6 +36,9 @@ ul{
     flex-direction: column;
     flex-wrap: wrap;
     list-style: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .container-list-info{
@@ -45,7 +47,7 @@ ul{
     flex-direction: column;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0px 0px 20px 0px;
+    align-items: center;
 }
 .li-info:hover{
     padding-left: 10px;
@@ -57,7 +59,7 @@ ul{
     background-color: #1b1b1b;
     border-top: 1px solid #65666a;
     color: #fff;
-    padding: 50px 20px 20px;
+    padding: 20px 20px ;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -68,29 +70,33 @@ ul{
     height: 45px;
     width: 220px;
     border-radius: 5px;
+    
 }
 .container-email{
     display: flex;
     flex-wrap: wrap;
 }
-.img-icons-footer{
-    height:35px;
-    width: 35px;
-}
 
 .container-links-footer{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 20%;
+}
+.container-seguinos{
+    padding: 0px 20px 0px 0px;
+    
+}
+.container-icons-footer{
+    padding: 0px 20px 0px 0px;
 }
 
 .container-payment{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 15%;
+    width: 10%;
 }
 
  @media (max-width: 1024px){
@@ -110,10 +116,13 @@ ul{
         height: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        
     }
 
     .container-email{
         justify-content: center;
+        align-items: center;
     }
 
     .container-list-info ul{
@@ -125,24 +134,52 @@ ul{
         padding: 0px;
     }
 
-    .container-bottom-footer{
+    .container-bottom-footer, .container-seguinos{
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
     }
-    .container-links-footer, .container-payment{
-        width: 100%;
+
+    .container-icons-footer{
+        display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px 20px;
-    }
-    .img-icons-footer{
-        height:20px;
-        width: 20px;
-        margin: 0px 5px 0px 5px;
     }
     
 
+    .container-links-footer, .container-seguinos, .container-icons-footer{
+        width: 100%;
+        padding: 0;
+    }
+    .container-icons-footer, .container-payment{
+        padding: 10px 0px 20px 0px;
+    }
+    .container-icons-footer a{
+        padding: 2px;
+    }
+    .container-payment{
+        width: 30%;
+    }
 
+}
+
+@media (max-width: 480px){
+    .container-texto-novedades{
+        text-align: center;
+        
+    }
+    .container-email{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn-footer{
+        width: 220px;
+        margin: 0;
+    }
+    .container-list-info, .container-copy{
+        text-align: center;
+    }
+    
+    
 }
