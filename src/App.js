@@ -10,7 +10,7 @@ import ShippingBanner from './components/ShippingBanner/ShippingBanner';
 function App() {
   return (
 
-    <div className="App">
+    <div className="App" >
         <NavBar></NavBar>
         <CarouselImages />
         <ShippingBanner></ShippingBanner>
