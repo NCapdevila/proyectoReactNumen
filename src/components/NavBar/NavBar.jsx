@@ -24,7 +24,7 @@ const NavBar = () => {
   window.addEventListener("scroll", setFix);
   return (
     
-    <>
+    <div>
       <NavBarHeader />
       <div className={`navBar__Container ${fixed ? 'navbar_fixed' : 'navbar_notfixed'}`}>
         <div className="LogoNavBar__container">
@@ -47,7 +47,7 @@ const NavBar = () => {
           <NavBarIcons />
           </div>
       </div>
-    </>
+    </div>
   );
 
 }
