@@ -22,6 +22,8 @@ function App() {
         <CarouselImages />
         <ShippingBanner></ShippingBanner>
         <CardContainer></CardContainer>
+        <CardsBe />
+        <SwiperIg /> 
         <ImgBottom />
         <Footer />
     </div>
