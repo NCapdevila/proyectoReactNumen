@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "./SwiperIg.css";
 
 // import required modules
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 
 import img1 from './imgSwiper/1.jpg'
 import img2 from './imgSwiper/2.jpg'
@@ -53,10 +53,14 @@ export default function SwiperIg() {
         </div>
         <Swiper
         slidesPerGroup={1}
+        autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+            }}
         loop={true}
         loopFillGroupWithBlank={true}
-        navigation={true}
-        modules={[Navigation]}
+        navigation={false}
+        modules={[Navigation, Autoplay]}
         breakpoints={breakP}
         className="mySwiper"
         >
