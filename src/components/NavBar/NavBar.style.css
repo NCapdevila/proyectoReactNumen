@@ -5,6 +5,8 @@
     list-style: none;
 }
 
+
+
 /* ESTILOS NAVBAR COMPLETO */
 .navBar__Container {
     display: flex;
@@ -268,6 +270,9 @@
 
 @media (max-width: 1200px) {
 
+    .navbar_notfixed{
+        top: 0;
+    }
     /* ESTILOS PARA ICONS MOBILE */
     .nav__icons {
         display: flex;
@@ -468,10 +473,14 @@
 }
 
 @media (max-width: 576px) {
+    .navbar_notfixed{
+        top: 0;
+    }
     .LogoNavBar__container {
         margin: 0;
         margin-bottom: 10px;
         margin-left: 15px;
+        font-size: 35px;
     }
 
     .nav__icons {
