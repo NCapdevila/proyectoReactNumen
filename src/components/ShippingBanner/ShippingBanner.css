@@ -1,39 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&family=Roboto+Slab&display=swap');
 
-.list-banner{
+.containerbanner{
+    margin-top: 0.8rem;
+    width: 100%;
     display: flex;
-    justify-content:space-around;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    font-family: 'Roboto Slab', serif;
-    box-sizing: border-box;
-    padding: 2rem 0rem 2rem 0rem;
-}
-.item-banner{
-    display: flex;
-    width: 25%;
-}
-.icon-container{
-    align-self: center;
-    width: 30%;
-}
-.container{
-    border-left: 2px solid black;
-    align-self: center;
-}
-.icons{
-    width: 2.5rem;
-    margin-left: 2rem;
 }
 
-.tite-banner{
-    font-size: 1.4rem;
-    font-weight: 500;
+.cardbanner{
+    width: 16rem;
+    height: 5rem;
+    flex-direction: row;
+    border-radius: 4px;
+}
+.imgbanner{
+    width: 1.4rem;
+    height: auto;
+    margin-right: 0.5rem;
 }
 
-.paragraph-banner{
-    font-size: 1rem;
-    color:grey;
+.titlebanner{
+    font-size: 0.8rem;
+    color: black;
+    font-weight: 600;
 }
 
+.textbanner{
+    font-size: 0.7rem;
+    color: rgb(105, 102, 102);
+}
+
+.bodybanner{
+    border-left: 1px solid black;
+}
