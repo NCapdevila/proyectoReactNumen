@@ -20,7 +20,7 @@ function App() {
     <div className="App">
         <NavBar></NavBar>
         <CarouselImages />
-        <ShippingBanner></ShippingBanner>
+        <ShippingBanner />
         <CardContainer></CardContainer>
         <CardsBe />
         <SwiperIg /> 
