@@ -1,0 +1,137 @@
+
+.carshop__button{
+    border: 0 !important;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.carshop__button:hover{
+    background-color: #fff;
+    color: rgb(39, 42, 211);;
+}
+.modalCarShopTitle{
+    text-align: center ;
+    width: 100%;
+}
+.ModalHeaderCarShop{
+    border: 0;
+}
+.modal_items_body{
+    height: 450px;
+    overflow-y: auto;
+}
+.modalBodyCar__container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.modalBodyImg__container img{
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+}
+.itemName{
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-evenly;
+}
+.nameItem__container{
+    text-transform: uppercase;
+}
+.totalItems{
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-evenly;
+    
+}
+.priceItem{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.deleteItem{
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+}
+.totalItemsTitle{
+    text-align: center;
+}
+.changeTotalItems{
+    display: flex;
+    flex-flow: nowrap row;
+    
+}
+.numberItems{
+    padding: 1px 30px;
+    border-top: 1px solid rgb(116, 111, 111);
+    border-bottom: 1px solid rgb(116, 111, 111);
+}
+
+.buttontotalItems{
+    padding: 1px 15px;
+    border: 1px solid rgb(116, 111, 111);
+}
+.buttonitem-1{
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.buttonitem-2{
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.modal_footer{  
+    border-top: 1px solid rgb(82, 80, 80);
+}
+.modal__footercontainer{
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 90%;
+    height: 100px;
+}
+
+.buttonsCart__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalprice__container{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 25px;
+}
+
+.cancelButton{
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    padding: 10px 50px;
+    border: 1px solid rgb(0, 0, 0)
+}
+
+.ButtonCart{
+    background-color: #724758;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+}
+.ButtonCart:hover{
+    background-color: #724758;
+    color: white;
+}
+
+.ButtonCart2{
+    background-color: #222122;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+    margin-left: 20px;
+}
+.ButtonCart2:hover{
+    background-color: #222122;
+    color: white;
+}
