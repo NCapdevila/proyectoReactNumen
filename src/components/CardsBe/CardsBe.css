@@ -1,0 +1,42 @@
+.title {
+    width: 100%;
+    height: 60px; 
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.containerCard {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgcard { 
+    height: 90px;
+    width: 90px;
+}
+.title {
+    text-align: center;
+}
+.card {
+    height: 330px;
+    width:300px;
+    border: none;
+    color:dimgray;
+    justify-items: center;
+    align-items: center;
+    padding:10px;
+    margin:auto;
+}
+
+.cardTitle {
+    text-align: center;
+}
+
+.cardtext {
+    text-align: justify;
+    font-size: 16px;
+}

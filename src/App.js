@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './components/NavBar/NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ImgBottom from './components/ImgBottom/ImgBottom';
+import './components/CarouselImages/CarouselImages.css'
+import Footer from './components/Footer/Footer';
+import CardsBe from './components/CardsBe/CardsBe';
+import CarouselImages from './components/CarouselImages/CarouselImages';
+import ShippingBanner from './components/ShippingBanner/ShippingBanner';
+import CardContainer from './components/card_container/CardContainer';
+import SwiperIg from './components/SwiperIg/SwiperIg';
+
+
+/*import "swiper/css/bundle";*/
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <NavBar></NavBar>
+        <CarouselImages />
+        <ShippingBanner />
+        <CardContainer></CardContainer>
+        <CardsBe />
+        <SwiperIg /> 
+        <ImgBottom />
+        <Footer />
     </div>
-  );
+  )
 }
 
 export default App;

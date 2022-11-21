@@ -1,0 +1,30 @@
+.title{
+    color: black;
+    font-size: 3em;
+}
+
+.paragraph{
+    color: black;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+
+@media (max-width: 1200px){
+    .carousel__container{
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 700px){
+    .carousel__container{
+        margin-top: 120px;
+    }
+}
+
+@media (max-width: 500px){
+    .carousel__container{
+        margin-top: 130px;
+    }
+}
+

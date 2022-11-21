@@ -1,0 +1,34 @@
+
+.containerbanner{
+    margin-top: 0.8rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardbanner{
+    width: 16rem;
+    height: 5rem;
+    flex-direction: row;
+    border-radius: 4px;
+}
+.imgbanner{
+    width: 1.4rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+.titlebanner{
+    font-size: 0.8rem;
+    color: black;
+    font-weight: 600;
+}
+
+.textbanner{
+    font-size: 0.7rem;
+    color: rgb(105, 102, 102);
+}
+
+.bodybanner{
+    border-left: 1px solid black;
+}
