@@ -7,11 +7,11 @@ import "./Modal_Carshop.style.css";
 
 function Modal_Carshop() {
   const [lgShow, setLgShow] = useState(false);
-
   return (
     <>
       <Button className="carshop__button" onClick={() => setLgShow(true)}>
         <FaShoppingCart />
+        <span className="itemTotal">0</span>
       </Button>
       <Modal
         size="xl"
@@ -31,6 +31,8 @@ function Modal_Carshop() {
         <Modal.Body className="modal_items_body">
           <ItemsCarShop />
           <ItemsCarShop />
+          <ItemsCarShop />
+          <ItemsCarShop />
         </Modal.Body>
         <Modal.Footer className="modal_footer">
           <div className="modal__footercontainer">
@@ -39,11 +41,11 @@ function Modal_Carshop() {
             </div>
             <div className="buttonsCart__container">
               <div>
-                <Button className='cancelButton'>Cancelar</Button>{" "}
+                <Button className='cancelButton' onClick={() => setLgShow(false)}>Cancelar</Button>{" "}
               </div>
               <div>
-                <Button className='ButtonCart' variant="info">Continuar comprando</Button>{" "}
-                <Button className='ButtonCart2' variant="dark">Finalizar compra</Button>{" "}
+                <Button className='ButtonCart' variant="info" onClick={() => setLgShow(false)}>Continuar comprando</Button>{" "}
+                <Button className='ButtonCart2' variant="dark" >Finalizar compra</Button>{" "}
               </div>
             </div>
           </div>

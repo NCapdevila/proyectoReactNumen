@@ -10,6 +10,8 @@ import CarouselImages from './components/CarouselImages/CarouselImages';
 import ShippingBanner from './components/ShippingBanner/ShippingBanner';
 import CardContainer from './components/card_container/CardContainer';
 import SwiperIg from './components/SwiperIg/SwiperIg';
+import { ModalTitle } from 'react-bootstrap';
+import Modal_Carshop from './components/Modal_Carshop/Modal_Carshop';
 
 
 /*import "swiper/css/bundle";*/
