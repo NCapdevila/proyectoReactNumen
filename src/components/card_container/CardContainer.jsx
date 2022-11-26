@@ -15,7 +15,7 @@ const CardContainer = (props) => {
   /* Aqui hago la llamada de los productos con Get y AXIOS */
   const fetchProducts = async () => {
     setIsLoading(true);
-    const result = await axios.get('http://localhost:5000/products')
+    const result = await axios.get('http://localhost:9000/products')
     setProducts(await result.data)
     setIsLoading(false);
   }
