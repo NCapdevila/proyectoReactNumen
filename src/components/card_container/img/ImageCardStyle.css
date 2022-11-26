@@ -1,18 +1,16 @@
 .ImageCardContainer {
-
-width: 100%;
-position: relative;
-height: 60%;
-
+  width: 100%;
+  position: relative;
 }
+
 .ImageCard {
-      width: 100%;
-      object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 
 .ImageCardLogo {
-      position: absolute;
-      top: 5px;
-      right: 10px;
-      width: 13%;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 13%;
 }
