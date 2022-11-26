@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+
+import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { FaShoppingCart } from "react-icons/fa";
 import ItemsCarShop from "./ItemsCarShop/ItemsCarShop";
 import "./Modal_Carshop.style.css";
 
-function Modal_Carshop() {
+function Modal_Carshop( { cantidadCarrito }) {
   const [lgShow, setLgShow] = useState(false);
   return (
     <>
       <Button className="carshop__button" onClick={() => setLgShow(true)}>
         <FaShoppingCart />
-        <span className="itemTotal">0</span>
+        <span className="itemTotal">{cantidadCarrito}</span>
       </Button>
       <Modal
         size="xl"
