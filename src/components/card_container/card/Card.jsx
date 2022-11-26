@@ -5,18 +5,14 @@ import './CardStyle.css';
 
 function Card(props) {
 
-      return (
+  return (
+    <div className='CardStyle'>
+      <Logo user={props.sale.user} />
+      <ImageCard sale={props.sale} />
+      <Detail sale={props.sale} />
 
-            <a href="../public.index.html">
-                  <div className='CardStyle'>
-                        <Logo user={props.sale.user} />
-                        <ImageCard sale={props.sale} />
-                        <Detail sale={props.sale} />
-                        
-                  </div>
-            </a>
-
-      )
+    </div>
+  )
 }
 
 export default Card;

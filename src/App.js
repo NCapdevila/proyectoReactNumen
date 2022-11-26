@@ -11,7 +11,6 @@ import ShippingBanner from './components/ShippingBanner/ShippingBanner';
 import CardContainer from './components/card_container/CardContainer';
 import SwiperIg from './components/SwiperIg/SwiperIg';
 
-
 /*import "swiper/css/bundle";*/
 
 

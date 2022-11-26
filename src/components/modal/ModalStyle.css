@@ -1,0 +1,168 @@
+/*Modal Index CSS*/
+.modalBtn {
+  padding: .7rem 1.3rem;
+  border-radius: 10px;
+  background-color: rgb(252, 0, 0);
+  color: white;
+  font-weight: 700;
+  outline: none;
+  border: none;
+}
+
+.modalBtn:hover {
+  background-color: rgb(255, 102, 0);
+}
+
+/*Modal CSS*/
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  backdrop-filter: blur(3px);
+}
+
+.modalContainer {
+  max-width: 600px;
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  z-index: 4;
+  border-radius: 10px;
+}
+
+.imagen_modal {
+  background-color: rgb(229, 229, 229);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.imagen_modal img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  padding: .8rem;
+}
+
+.modalRight {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 1.5rem;
+  align-items: center;
+  height: 100%;
+
+}
+
+.closeBtn {
+  position: fixed;
+  top: 1px;
+  right: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  box-shadow: rgb(38, 57, 77) 0px 7px 20px -10px;
+  border-radius: 10px;
+}
+
+.btnContainer button {
+  padding: .7rem 1rem;
+  border: none;
+
+}
+
+.btnPrimary {
+  background-color: rgb(229, 229, 229);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.btnOutline {
+  background-color: rgb(229, 229, 229);
+  border-end-end-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.showQuantity {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .6rem 2rem;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: rgb(229, 229, 229);
+  border-left: 2px solid rgb(183, 183, 183);
+  border-right: 2px solid rgb(183, 183, 183);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.monto_valor {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.modalRight_button button {
+  padding: .7rem 1.3rem;
+  border-radius: 10px;
+  background-color: rgb(252, 0, 0);
+  color: white;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+
+@media screen and (max-width: 500px) {
+  .modalContainer {
+    flex-direction: column;
+    top: 90px;
+    left: 0;
+    position: relative;
+    transform: none;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .imagen_modal img {
+    width: 70%;
+  }
+
+
+  .closeBtn {
+    z-index: 500;
+    position: absolute;
+    font-size: 30px;
+  }
+}
