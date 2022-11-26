@@ -1,16 +1,25 @@
 .cardContainer {
-      height: auto;
-      width: 100%;
-      background-color: #fff;
-      display: flex;
-      margin-top: 1rem;
-      align-items: center;
-      justify-content: center;
-      gap: .5rem;
-      flex-wrap: wrap;
-      padding: 2rem 0;
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+
 }
 
 p {
-      margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+.spinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 2rem;
 }

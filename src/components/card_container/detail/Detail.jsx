@@ -1,23 +1,32 @@
 
-import ButtonFooter from "../../Footer/Buttons/Button";
+import ModalIndex from "../../modal/ModalIndex";
 import "./DetailStyle.css"
 
 
 const Detail = (props) => {
 
-      return (
-            <div className="DetailContainer">
-                  <p className="DetailBrand">{props.sale.brand}</p>
+  return (
+    <div className="DetailContainer">
+      <p className="DetailBrand">{props.sale.brand}</p>
 
-                  <p className="DetailSize">{props.sale.size}</p>
-                  <div className="Absolute">
-                        <ButtonFooter text="Comprar" />
-                  </div>
+      <div className="Absolute">
+        <ModalIndex products={props.sale} />
+      </div>
 
-                  {(props.sale.offer) ? <p className="DetailPrice">$ {Math.round((props.sale.price) - (props.sale.price * props.sale.offerNumber / 100))} <span> {props.sale.offerNumber}% Off</span><p className="DetailOffer">$ {props.sale.price}</p></p> : <p className="DetailPrice">$ {props.sale.price} </p>}
+      {(props.sale.offer) ?
+        <div>
+          <p className="DetailPrice">
+            $ {Math.round((props.sale.price) - (props.sale.price * props.sale.offerNumber / 100))}
+            <span> {props.sale.offerNumber}% Off</span>
+          </p>
+          <p className="DetailOffer">$ {props.sale.price}</p>
+        </div>
+        :
+        <p className="DetailPrice">$ {props.sale.price} </p>
+      }
 
-            </div>
-      );
+    </div>
+  );
 }
 
 export default Detail;

@@ -1,31 +1,31 @@
 .DetailContainer {
-      margin-left: 1rem;
-      margin-top: 1rem;
-      height: auto;
-     position: relative;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  position: relative;
 }
 
 .DetailBrand {
- font-weight: 600;
+  font-weight: 600;
 }
 
 .DetailSize {
-font-size: .9rem;
+  font-size: .9rem;
 }
 
 .DetailPrice {
-font-weight: bold;
+  font-weight: bold;
 }
 
 .DetailOffer {
-text-decoration: line-through;
-color: rgb(230, 81, 81);
+  text-decoration: line-through;
+  color: rgb(230, 81, 81);
 }
 
 span {
-      font-weight: 400;
+  font-weight: 400;
 }
+
 .Absolute {
-      position: absolute;
-      right: 15px;
+  position: absolute;
+  right: 15px;
 }
