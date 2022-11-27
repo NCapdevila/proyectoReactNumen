@@ -3,26 +3,23 @@ import './ModalStyle.css'
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import axios from 'axios';
 
+
 function Modal({ open, onClose, products }) {
 
   const [quantity, setQuantity] = useState(1)
   
-  const AgregrarItemCart = () =>{
+  const AgregarItemCart = () =>{
     
       
       const addItem = async () =>{
         const url = 'http://localhost:9000/itemsCart';
         const res = await axios.post(url, products);
-        console.log(res)
       }
       addItem();
     }
-      
-      
-    
-    
-    
-  
+
+ 
+
 
   return (open) && (
     <div onClick={onClose} className='overlay'>
@@ -32,8 +29,6 @@ function Modal({ open, onClose, products }) {
         <div className='imagen_modal'>
           <img src={`../images/${products.imageRoot}.jpg`} alt="" />
         </div>
-        {console.log(products)}
-
 
 
         <div className="modalRight">
@@ -66,7 +61,7 @@ function Modal({ open, onClose, products }) {
               : <p className='monto_valor'>$ {quantity * products.price}</p>}
           </div>
           <div className="modalRight_button">
-            <button onClick={AgregrarItemCart}>Agregar al Carrito</button>
+            <button onClick={AgregarItemCart}  className='modalBtn'>Agregar al carrito</button>
           </div>
         </div>
       </div>

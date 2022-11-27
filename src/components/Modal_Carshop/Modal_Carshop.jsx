@@ -1,18 +1,30 @@
-
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { FaShoppingCart } from "react-icons/fa";
 import ItemsCarShop from "./ItemsCarShop/ItemsCarShop";
 import "./Modal_Carshop.style.css";
 
-function Modal_Carshop( { cantidadCarrito }) {
+
+
+function Modal_Carshop( { }) {
   const [lgShow, setLgShow] = useState(false);
+  const [itemsCarrito, setitemsCarrito] = useState([])
+
+  useEffect(() =>{
+    const verItemsCarrito = async ()=>{
+      const res = await axios.get('http://localhost:9000/itemsCart');
+      setitemsCarrito(res.data)
+    }
+    verItemsCarrito();
+  },[itemsCarrito]);
+
   return (
     <>
       <Button className="carshop__button" onClick={() => setLgShow(true)}>
         <FaShoppingCart />
-        <span className="itemTotal">{cantidadCarrito}</span>
+        <span className="itemTotal">{itemsCarrito.length}</span>
       </Button>
       <Modal
         size="xl"
