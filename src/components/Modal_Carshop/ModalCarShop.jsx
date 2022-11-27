@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { FaShoppingCart } from "react-icons/fa";
-import ItemsCarShop from "./ItemsCarShop/ItemsCarShop";
 import "./Modal_Carshop.style.css";
 export const BASE_URL = 'http://localhost:8000';
 
 function ModalCarShop() {
   const [lgShow, setLgShow] = useState(false);
   const [refetch, setRefetch] = useState(false);
-
+  const [itemsCarrito, setitemsCarrito] = useState([])
   const refetchData = () => setRefetch(!refetch);
   console.log(refetch);
   /*const editFormData = (id) => {
@@ -17,12 +17,21 @@ function ModalCarShop() {
   }*/
 
 
+  /*useEffect(() =>{
+    const verItemsCarrito = async ()=>{
+      const res = await axios.get('http://localhost:9000/itemsCart');
+      setitemsCarrito(res.data)
+    }
+    verItemsCarrito();
+  },[itemsCarrito]);*/
+
   return (
 
     
     <>
       <Button className="carshop__button" onClick={() => setLgShow(true)}>
         <FaShoppingCart />
+        {/*<span className="itemTotal">{itemsCarrito.length}</span>*/}
       </Button>
       <Modal
         size="xl"
@@ -40,11 +49,7 @@ function ModalCarShop() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="modal_items_body">
-          <ItemsCarShop 
-          refetch={refetch}
-          refetchData={refetchData}
-          url={BASE_URL}
-          />
+          
         </Modal.Body>
         <Modal.Footer className="modal_footer">
           <div className="modal__footercontainer">
@@ -53,11 +58,11 @@ function ModalCarShop() {
             </div>
             <div className="buttonsCart__container">
               <div>
-                <Button className='cancelButton'>Cancelar</Button>{" "}
+                <Button className='cancelButton' onClick={() => setLgShow(false)}>Cancelar</Button>{" "}
               </div>
               <div>
-                <Button className='ButtonCart' variant="info">Continuar comprando</Button>{" "}
-                <Button className='ButtonCart2' variant="dark">Finalizar compra</Button>{" "}
+                <Button className='ButtonCart' variant="info" onClick={() => setLgShow(false)}>Continuar comprando</Button>{" "}
+                <Button className='ButtonCart2' variant="dark" >Finalizar compra</Button>{" "}
               </div>
             </div>
           </div>

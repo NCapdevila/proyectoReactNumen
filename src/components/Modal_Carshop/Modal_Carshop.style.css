@@ -3,6 +3,23 @@
     border: 0 !important;
     font-size: 20px;
     margin-right: 10px;
+    position: relative;
+}
+
+.itemTotal{
+    position: absolute;
+    top: 0.1rem;
+    right: -0.1rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+
 }
 
 .carshop__button:hover{
@@ -19,12 +36,22 @@
 .modal_items_body{
     height: 450px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 .modalBodyCar__container{
     display: flex;
     width: 100%;
     justify-content: space-around;
-}
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+}   
 .modalBodyImg__container img{
     width: 128px;
     height: 128px;
