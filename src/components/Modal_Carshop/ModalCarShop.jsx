@@ -18,7 +18,7 @@ function ModalCarShop() {
 
 
   /*useEffect(() =>{
-    const verItemsCarrito = async ()=>{
+    const verItemsCarrito = async ()=>{<
       const res = await axios.get('http://localhost:9000/itemsCart');
       setitemsCarrito(res.data)
     }
