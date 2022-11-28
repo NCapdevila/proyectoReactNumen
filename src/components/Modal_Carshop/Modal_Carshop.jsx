@@ -18,7 +18,7 @@ function Modal_Carshop( { }) {
       setitemsCarrito(res.data)
     }
     verItemsCarrito();
-  },[itemsCarrito]);
+  },[]);
 
   return (
     <>
