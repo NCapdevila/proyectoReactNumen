@@ -1,7 +1,4 @@
-import imagen from "../imagen.jpg";
-import { FaTrashAlt } from "react-icons/fa";
 import useFetchData from "../../../hooks/UseFetchData";
-import Prueba from "./Prueba";
 import useDeleteData from "../../../hooks/UseDeleteData";
 import ItemCart from "./ItemCart/ItemCart";
 
@@ -15,24 +12,36 @@ const ItemsCarShop = (props) => {
 
   const {
     deleteData,
-    isLoading: isFormDeletion,
+    successDelete: issuccessDelete,
     error: DeletionError,
   } = useDeleteData(url, refetchData, "Hubo un error al intentar borrar el item")
-  
   return (
     <div>
+    <div>
+      
       {
-        forms.map(form =>(
-          <ItemCart 
-          name={form.type}
-          brand={form.brand}
-          price={form.price}
-          quantity={form.quantity}
-          deleteData={deleteData}
-          id={form.id}
-          />
-        ))
+      dataError.IsError ? 
+      <div>Hubo un error al intentar cargar los íems del carrito</div> 
+      :
+      isDataLoading ? 
+      ""
+      :
+      forms.map(form =>(
+        <ItemCart 
+        name={form.type}
+        brand={form.brand}
+        price={form.price}
+        quantity={form.quantity}
+        deleteData={deleteData}
+        id={form.id}
+        />
+      ))
       }
+        
+    </div>
+    <div>{issuccessDelete ? "" :
+    <div>Se borró un ítem del carrito</div>
+      }</div>
     </div>
   );
 };
