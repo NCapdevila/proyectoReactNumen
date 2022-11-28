@@ -56,5 +56,17 @@
       "imageRoot": 5
     }
   ],
-  "itemsCart": []
+  "itemsCart": [
+    {
+      "id": 4,
+      "user": "Erick",
+      "brand": "React",
+      "type": "Polera",
+      "quantity": 2,
+      "price": 3000,
+      "offer": true,
+      "offerNumber": 40,
+      "imageRoot": 4
+    }
+  ]
 }
