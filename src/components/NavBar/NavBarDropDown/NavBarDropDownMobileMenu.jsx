@@ -17,18 +17,22 @@ const NavBarDropDownMobileMenu = (props) =>{
     const nameItems = [
         {
             nameItem : 'Categoria',
+            id: 1,
             item: <NavBarDropDownItemsContainer items={links}/>
         },
         {
             nameItem : 'Marcas',
+            id: 2,
             item: <NavBarDropDownItemsContainer items={dropDownItemsBrands} itsFor= {itsFor}/>
         },
         {
             nameItem : 'Top Sellers',
+            id: 3,
             item: <NavBarDropDownItemsContainer items={dropDownItemsTopSellers} itsFor= {itsFor}/>
         },
         {
             nameItem : 'Mas opciones',
+            id: 4,
             item: <NavBarDropDownItemsContainer items={dropDownItemsExtras}/>
         },
     ]
@@ -42,7 +46,7 @@ const NavBarDropDownMobileMenu = (props) =>{
                         return(
                         <>
                         <div className='itemMenuMobile_container'  onClick={() => {toggle(index)}}>
-                            <li key={index}>{item.nameItem}</li>
+                            <li key={item.id}>{item.nameItem}</li>
                             <ArrowMobile state={selected === index ? true : false}/>
                         </div>
                         <div className={`${selected === index ? 'showContent' : 'disableContent'}`}>
@@ -53,14 +57,6 @@ const NavBarDropDownMobileMenu = (props) =>{
                         
                     })
                 }
-                {/*<li key={1}>Categoria</li>
-                <NavBarDropDownItemsContainer items={links} title='Categoria' />
-                <li key={2}>Marcas</li>
-                <NavBarDropDownItemsContainer items={dropDownItemsBrands} itsFor= {itsFor} title='Marcas' />
-                <li key={3}>Top Sellers</li>
-                <NavBarDropDownItemsContainer items={dropDownItemsTopSellers} itsFor= {itsFor} title='Top-Sellers' />
-                <li key={4}>Descubre</li>
-                <NavBarDropDownItemsContainer items={dropDownItemsExtras} title='Mas opciones' />*/}
         </div>
     )
 }

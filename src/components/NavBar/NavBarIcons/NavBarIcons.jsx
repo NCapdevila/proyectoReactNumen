@@ -1,17 +1,14 @@
 
 
-import { useState } from "react";
-import { FaUserAlt} from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
 import Button from "../../Footer/Buttons/Button";
-import Modal_Carshop from "../../Modal_Carshop/Modal_Carshop";
+import ModalCarShop from "../../Modal_Carshop/ModalCarShop";
+
 
 const NavBarIcon = () => {
-
-  const [openModal, SetopenModal] = useState(false);
-  
   return (
     <div className="navicons__container">
-        <Modal_Carshop />
+      <ModalCarShop />
       <button className="userIconNavBar"><FaUserAlt/></button>
       <Button style='btn-nav' text='Vender'/>
     </div>

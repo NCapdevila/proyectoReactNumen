@@ -56,17 +56,5 @@
       "imageRoot": 5
     }
   ],
-  "itemsCart": [
-    {
-      "id": 1,
-      "user": "1st post",
-      "brand": "Adidas",
-      "type": "Polera",
-      "quantity": 3,
-      "price": 899,
-      "offer": true,
-      "offerNumber": 39,
-      "imageRoot": 1
-    }
-  ]
+  "itemsCart": []
 }
