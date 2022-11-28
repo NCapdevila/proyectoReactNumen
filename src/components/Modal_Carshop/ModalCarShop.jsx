@@ -3,27 +3,36 @@ import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { FaShoppingCart } from "react-icons/fa";
+import ItemsCarShop from "./ItemsCarShop/ItemsCarShop";
 import "./Modal_Carshop.style.css";
-export const BASE_URL = 'http://localhost:8000';
+export const BASE_URL = 'http://localhost:9000/itemsCart';
 
 function ModalCarShop() {
   const [lgShow, setLgShow] = useState(false);
   const [refetch, setRefetch] = useState(false);
   const [itemsCarrito, setitemsCarrito] = useState([])
   const refetchData = () => setRefetch(!refetch);
-  console.log(refetch);
   /*const editFormData = (id) => {
     setEditFormId((prevId) => prevId === id ? '' : id);
   }*/
 
 
-  /*useEffect(() =>{
-    const verItemsCarrito = async ()=>{<
-      const res = await axios.get('http://localhost:9000/itemsCart');
-      setitemsCarrito(res.data)
+  useEffect(() =>{
+    const verItemsCarrito = async ()=>{ 
+      try{
+        const res = await axios.get('http://localhost:9000/itemsCart');
+        setitemsCarrito(res.data)
+      } 
+      catch{
+
+      }
+      finally{
+
+      }
+      
     }
     verItemsCarrito();
-  },[itemsCarrito]);*/
+  },[refetch]);
 
   return (
 
@@ -31,7 +40,7 @@ function ModalCarShop() {
     <>
       <Button className="carshop__button" onClick={() => setLgShow(true)}>
         <FaShoppingCart />
-        {/*<span className="itemTotal">{itemsCarrito.length}</span>*/}
+        <span className="itemTotal">{itemsCarrito.length}</span>
       </Button>
       <Modal
         size="xl"
@@ -49,7 +58,14 @@ function ModalCarShop() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="modal_items_body">
+
+        <ItemsCarShop
+          refetch={refetch}
+          refetchData={refetchData}
+          url={BASE_URL}
           
+          />
+
         </Modal.Body>
         <Modal.Footer className="modal_footer">
           <div className="modal__footercontainer">

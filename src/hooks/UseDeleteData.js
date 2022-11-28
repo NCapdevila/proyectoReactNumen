@@ -18,7 +18,7 @@ const useDeleteData = (url, onSuccess, errorMessage) => {
                 
             })
             if (res.status === 200) {
-                setTimeout(() => onSuccess(), 0);
+                setTimeout(() => onSuccess(), 1000);
             }
         } catch (e) {
             setError({
