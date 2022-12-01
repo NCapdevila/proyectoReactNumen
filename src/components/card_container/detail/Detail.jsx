@@ -4,13 +4,12 @@ import "./DetailStyle.css"
 
 
 const Detail = (props) => {
-
   return (
     <div className="DetailContainer">
       <p className="DetailBrand">{props.sale.brand}</p>
 
       <div className="Absolute">
-        <ModalIndex products={props.sale} />
+        <ModalIndex products={props.sale}  agregaritems={props.agregaritems}/>
       </div>
 
       {(props.sale.offer) ?
