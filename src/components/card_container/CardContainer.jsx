@@ -75,7 +75,7 @@ const agregaritem =  (items, finalquantity) =>{
         ...items,
         quantityfinally : finalquantity
       }
-        setItemsData([...itemsdata, items])
+        setItemsData([...itemsdata, itemsfinal])
 }
 
   const headerContainer = 'Productos destacados';

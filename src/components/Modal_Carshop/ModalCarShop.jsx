@@ -38,8 +38,7 @@ function ModalCarShop() {
         </Modal.Header>
         <Modal.Body className="modal_items_body">
 
-        <ItemsCarShop
-          />
+        <ItemsCarShop/>
 
         </Modal.Body>
         <Modal.Footer className="modal_footer">
