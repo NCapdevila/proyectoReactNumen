@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './ModalStyle.css'
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import axios from 'axios';
 import { useEffect } from 'react';
 
 
@@ -12,7 +11,7 @@ function Modal({ open, onClose, products, agregaritems }) {
   const initialState =  products.offer ? (products.price - (products.price * (products.offerNumber / 100))) : products.price
   const [quantity, setQuantity] = useState(1)
   const [finalPrice, setFinalPrice] = useState(initialState);
-  console.log(initialState)
+
     const handlerQuantityLess = () =>{
       handlerFinalPrice()
       setQuantity(
@@ -71,7 +70,7 @@ function Modal({ open, onClose, products, agregaritems }) {
           </div>
           <div className="monto">
             {products.offer ?
-              (<p className='monto_valor'>{
+              (<p className='monto_valor'> ${
                 quantity * (products.price - (products.price * (products.offerNumber / 100)))
                 }</p>)
               : <p className='monto_valor'>$ {quantity * products.price}</p>}

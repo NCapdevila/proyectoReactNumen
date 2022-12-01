@@ -1,5 +1,5 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+
+import {useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { FaShoppingCart } from "react-icons/fa";
@@ -9,7 +9,6 @@ import "./Modal_Carshop.style.css";
 
 function ModalCarShop() {
   const [lgShow, setLgShow] = useState(false);
-  const [itemsCarrito, setitemsCarrito] = useState([])
 
 
 
@@ -38,8 +37,7 @@ function ModalCarShop() {
         </Modal.Header>
         <Modal.Body className="modal_items_body">
 
-        <ItemsCarShop
-          />
+        <ItemsCarShop/>
 
         </Modal.Body>
         <Modal.Footer className="modal_footer">
