@@ -1,12 +1,22 @@
+import { useState } from "react";
+import { useEffect } from "react";
 import ItemCart from "./ItemCart/ItemCart";
 
 const ItemsCarShop = (props) => {
 
-  const deleteData = () =>{
-    
+  const data = JSON.parse(localStorage.getItem("itemsprueba"))
+  const [isDelete, setIsDelete] = useState(false);
+  const deleteData = (id) =>{
+    const newData = data.filter(item => item.id !== id)
+    localStorage.setItem("itemsprueba", JSON.stringify(newData))
+    setIsDelete(!isDelete);
   }
 
-  const data = JSON.parse(localStorage.getItem("itemsprueba"))
+  
+  useEffect(() =>{
+    const data = JSON.parse(localStorage.getItem("itemsprueba"))
+  }, [isDelete])
+
   return (
     <div>
       <div>
@@ -19,6 +29,7 @@ const ItemsCarShop = (props) => {
             quantity={data.quantity}
             finalquantity={data.quantityfinally}
             id={data.id}
+            deleteData={deleteData}
             />
           ))
           

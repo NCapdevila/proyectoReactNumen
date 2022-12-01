@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './ModalStyle.css'
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import axios from 'axios';
 import { useEffect } from 'react';
 
 

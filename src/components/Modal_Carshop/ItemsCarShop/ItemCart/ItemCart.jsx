@@ -1,7 +1,7 @@
 import { FaTrashAlt } from "react-icons/fa";
 
 const ItemCart = (props) => {
-    const {name, brand, price, quantity, finalquantity, id } = props
+    const {name, brand, price, quantity, finalquantity, id, deleteData } = props
   
   return (
     <div className="modalBodyCar__container">
@@ -22,7 +22,7 @@ const ItemCart = (props) => {
         <span>${price}</span>
       </div>
       <div className="deleteItem">
-        <button>
+        <button onClick={() => deleteData(id)}>
           <FaTrashAlt />
         </button>
       </div>
