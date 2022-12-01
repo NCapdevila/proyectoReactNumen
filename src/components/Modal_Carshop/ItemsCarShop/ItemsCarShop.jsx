@@ -1,4 +1,4 @@
-import useFetchData from "../../../hooks/UseFetchData";
+import useFetchData from '../../../hooks/UseFetchData'
 import useDeleteData from "../../../hooks/UseDeleteData";
 import ItemCart from "./ItemCart/ItemCart";
 
@@ -8,7 +8,7 @@ const ItemsCarShop = (props) => {
     data: forms,
     isLoading: isDataLoading,
     error: dataError,
-  } = useFetchData(url, refetch);
+  } = useFetchData(url, refetch)
 
   const {
     deleteData,
@@ -23,8 +23,8 @@ const ItemsCarShop = (props) => {
       dataError.IsError ? 
       <div>Hubo un error al intentar cargar los íems del carrito</div> 
       :
-      isDataLoading ? 
-      ""
+      isDataLoading && !dataError.IsError ? 
+      "Cargando items"
       :
       forms.map(form =>(
         <ItemCart 
