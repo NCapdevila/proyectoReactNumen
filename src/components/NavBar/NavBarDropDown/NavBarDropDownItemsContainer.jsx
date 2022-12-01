@@ -12,20 +12,20 @@ const NavBarDropDownItemsContainer = (props) =>{
                     items.map(links =>{
                         if(links.hasOwnProperty('forPeople')){
                             if((itsFor === links.forPeople) || links.forPeople === 'Both' ){
-                                return(<li className={links.classN}>{links.nameItem}</li>);
+                                return(<li key={links.id} className={links.classN}>{links.nameItem}</li>);
                             } else {
                                 return false;
                             }
                         }
                         if(links.hasOwnProperty('sellsFor')){
                             if(itsFor === links.sellsFor){
-                                return(<li className={links.classN}>{links.nameItem}</li>);
+                                return(<li key={links.id} className={links.classN}>{links.nameItem}</li>);
                             } else {
                                 return false;
                             }
                         }
                         return(
-                            <li className={links.classN}>{links.nameItem}</li>
+                            <li key={links.id} className={links.classN}>{links.nameItem}</li>
                         )
                     })
                 }

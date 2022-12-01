@@ -1,24 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './ModalStyle.css'
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import axios from 'axios';
+
 
 
 function Modal({ open, onClose, products }) {
 
   const [quantity, setQuantity] = useState(1)
   
-  const AgregarItemCart = () =>{
-    
-      
-      const addItem = async () =>{
-        const url = 'http://localhost:9000/itemsCart';
-        const res = await axios.post(url, products);
-      }
-      addItem();
-    }
-
  
+
 
 
   return (open) && (
@@ -61,7 +52,7 @@ function Modal({ open, onClose, products }) {
               : <p className='monto_valor'>$ {quantity * products.price}</p>}
           </div>
           <div className="modalRight_button">
-            <button onClick={AgregarItemCart}  className='modalBtn'>Agregar al carrito</button>
+            <button onClick={() => AgregarItemCart(products)}  className='modalBtn'>Agregar al carrito</button>
           </div>
         </div>
       </div>
