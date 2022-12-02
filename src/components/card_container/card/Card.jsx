@@ -9,7 +9,7 @@ function Card(props) {
     <div className='CardStyle'>
       <Logo user={props.sale.user} />
       <ImageCard sale={props.sale} />
-      <Detail sale={props.sale} agregaritems={props.agregaritems} />
+      <Detail sale={props.sale}  agregaritems={props.agregaritems} />
     </div>
   )
 }
