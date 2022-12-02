@@ -6,7 +6,7 @@
     position: relative;
 }
 
-.itemTotal{
+.items-amount{
     position: absolute;
     top: 0.1rem;
     right: -0.1rem;

@@ -3,12 +3,13 @@ import { useState } from "react";
 
 const ItemCart = (props) => {
 
-    const {name, brand, price, quantity, finalquantity, id, deleteData } = props
+    const {name, brand, price, quantity, finalquantity, id, deleteData, img } = props
 
 
   return (
     <div className="modalBodyCar__container">
       <div className="modalBodyImg__container">
+      <img src={`../images/${img}.jpg`} className='ImageCard' alt="Ropa de Marca" />
       </div>
       <div className="itemName">
         <span className="nameItem__container">{name} {brand}</span>

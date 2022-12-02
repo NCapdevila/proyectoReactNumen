@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import './ModalStyle.css'
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import { useEffect } from 'react';
-
-
 
 
 function Modal({ open, onClose, products, agregaritems }) {

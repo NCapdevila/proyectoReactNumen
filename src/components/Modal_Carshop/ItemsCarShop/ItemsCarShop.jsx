@@ -16,6 +16,7 @@ const {itemsdata : data, deleteItem: deleteData} = useContext(userItemContext);
           data.map(data =>(
             <ItemCart 
             name={data.user}
+            img={data.imageRoot}
             brand={data.brand}
             price={data.price}
             quantity={data.quantity}
