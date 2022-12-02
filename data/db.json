@@ -63,6 +63,17 @@
       "brand": "Diadora",
       "type": "Polera",
       "quantity": 2,
+      "price": 3000,
+      "offer": true,
+      "offerNumber": 40,
+      "imageRoot": 4
+    },
+    {
+      "id": 3,
+      "user": "Ariana",
+      "brand": "Diadora",
+      "type": "Polera",
+      "quantity": 2,
       "price": 1200,
       "offer": false,
       "offerNumber": 0,
