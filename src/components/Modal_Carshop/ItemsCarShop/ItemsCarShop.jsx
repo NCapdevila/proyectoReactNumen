@@ -16,6 +16,7 @@ const {itemsdata : data, update ,  deleteItem: deleteData, updateItem} = useCont
           data.map(data =>(
             <ItemCart 
             name={data.user}
+            img={data.imageRoot}
             brand={data.brand}
             price={data.price}
             quantity={data.quantity}

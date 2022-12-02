@@ -8,21 +8,25 @@ import ItemsCarShop from "./ItemsCarShop/ItemsCarShop";
 import "./Modal_Carshop.style.css";
 
 
+
 function ModalCarShop() {
   const [lgShow, setLgShow] = useState(false);
+  const {itemsdata}=useContext(userItemContext)
 
   const {itemsdata : data} = useContext(userItemContext);
   let price = data.reduce((acc, item) =>{
     return acc = acc + item.finalprice
   }, 0);
   
+
+
   return (
 
     
     <>
       <Button className="carshop__button" onClick={() => setLgShow(true)}>
         <FaShoppingCart />
-        
+        <span className="items-amount">{itemsdata.length}</span>
       </Button>
       <Modal
         size="xl"

@@ -1,6 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import userItemContext from './userItemContext'
 
+
+
 export const itemsCartDataContext = createContext();
 export function ItemsCartContext (props) {
     const {children} = props;
@@ -54,7 +56,8 @@ export function ItemsCartContext (props) {
     const agregaritem =  (items, finalquantity, finalprice) =>{
       const istrue = itemsdata.filter(item => item.id === items.id)
       if(istrue.length > 0){
-        return alert('Ya agregaste este item al producto anteriormente');
+        /*return alert('Ya agregaste este item al producto anteriormente');*/
+        return alert("Su producto ya fue añadido");
       }
           const itemsfinal = {
             ...items,

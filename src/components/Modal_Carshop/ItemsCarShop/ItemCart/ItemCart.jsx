@@ -3,12 +3,13 @@ import { useState, useEffect } from "react";
 
 const ItemCart = (props) => {
 
-    const {name, brand, quantity, id, deleteData, finalquantity,  offer, offerdiscount, updateItem } = props
+    const {name, brand, quantity, id, deleteData, finalquantity,  offer, offerdiscount, updateItem, img } = props
     let {price } = props;
     price = offer ? (price - (price*(offerdiscount/100))) : price;
     const [finalquant, setFinalQuant] = useState(finalquantity);
     const initialprice = price*finalquant
     const [finalprice, setFinalPrice] = useState(initialprice);
+
 
     useEffect(() =>{
       updateItem(id, finalprice, finalquant);
@@ -32,6 +33,7 @@ const ItemCart = (props) => {
   return (
     <div className="modalBodyCar__container">
       <div className="modalBodyImg__container">
+      <img src={`../images/${img}.jpg`} className='ImageCard' alt="Ropa de Marca" />
       </div>
       <div className="itemName">
         <span className="nameItem__container">{name} {brand}</span>
