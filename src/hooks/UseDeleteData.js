@@ -5,12 +5,11 @@ const errorInitialState = { isError: false, message: '' };
 
 const useDeleteData = (url, onSuccess, errorMessage) => {
     const [error, setError] = useState(errorInitialState);
-    const [isLoading, setIsLoading] = useState(false);
+    const [successDelete, setsuccessDelete] = useState(true);
     const deleteData = async (id) => {
         
         try {
             
-            setIsLoading(true);
             setError(errorInitialState);
             const res = await axios({
                 method: 'delete',
@@ -18,7 +17,7 @@ const useDeleteData = (url, onSuccess, errorMessage) => {
                 
             })
             if (res.status === 200) {
-                setTimeout(() => onSuccess(), 1000);
+                onSuccess();
             }
         } catch (e) {
             setError({
@@ -26,11 +25,12 @@ const useDeleteData = (url, onSuccess, errorMessage) => {
                 message: e?.message || errorMessage,
             })
         } finally {
-            setTimeout(() => setIsLoading(false), 5000);
+            setsuccessDelete(false);
+            setTimeout(() => setsuccessDelete(true), 2000);
         }
     }
 
-    return { deleteData, isLoading, error };
+    return { deleteData, successDelete, error };
 }
 
 export default useDeleteData;

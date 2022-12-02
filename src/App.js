@@ -10,14 +10,17 @@ import CarouselImages from './components/CarouselImages/CarouselImages';
 import ShippingBanner from './components/ShippingBanner/ShippingBanner';
 import CardContainer from './components/card_container/CardContainer';
 import SwiperIg from './components/SwiperIg/SwiperIg';
+import ItemsCartContext from './contexts/ItemsCartContext';
+import { createContext } from 'react';
+import { Alert } from 'bootstrap';
 
 /*import "swiper/css/bundle";*/
-
 
 
 function App() {
   return (
     <div className="App">
+      <ItemsCartContext>
         <NavBar></NavBar>
         <CarouselImages />
         <ShippingBanner />
@@ -26,6 +29,8 @@ function App() {
         <SwiperIg /> 
         <ImgBottom />
         <Footer />
+      </ItemsCartContext>
+      
     </div>
   )
 }

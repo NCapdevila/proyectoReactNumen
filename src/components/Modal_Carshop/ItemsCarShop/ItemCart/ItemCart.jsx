@@ -1,10 +1,15 @@
 import { FaTrashAlt } from "react-icons/fa";
+import { useState } from "react";
 
 const ItemCart = (props) => {
-    const {name, brand, price, quantity, deleteData, id } = props
+
+    const {name, brand, price, quantity, finalquantity, id, deleteData, img } = props
+
+
   return (
     <div className="modalBodyCar__container">
       <div className="modalBodyImg__container">
+      <img src={`../images/${img}.jpg`} className='ImageCard' alt="Ropa de Marca" />
       </div>
       <div className="itemName">
         <span className="nameItem__container">{name} {brand}</span>
@@ -13,7 +18,7 @@ const ItemCart = (props) => {
         <span className="totalItemsTitle">Cantidad:</span>
         <div className="changeTotalItems">
           <button className="buttontotalItems buttonitem-1">-</button>
-          <div className="numberItems">{quantity}</div>
+          <div className="numberItems">{finalquantity}</div>
           <button className="buttontotalItems buttonitem-2">+</button>
         </div>
       </div>
@@ -21,7 +26,7 @@ const ItemCart = (props) => {
         <span>${price}</span>
       </div>
       <div className="deleteItem">
-        <button onClick={()=> deleteData(id)}>
+        <button onClick={() => deleteData(id)}>
           <FaTrashAlt />
         </button>
       </div>
