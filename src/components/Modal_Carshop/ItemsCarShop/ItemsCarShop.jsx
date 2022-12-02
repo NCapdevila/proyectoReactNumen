@@ -6,7 +6,7 @@ import ItemCart from "./ItemCart/ItemCart";
 
 const ItemsCarShop = (props) => {
 
-const {itemsdata : data, deleteItem: deleteData} = useContext(userItemContext);
+const {itemsdata : data, update ,  deleteItem: deleteData, updateItem} = useContext(userItemContext);
 
 
   return (
@@ -22,10 +22,12 @@ const {itemsdata : data, deleteItem: deleteData} = useContext(userItemContext);
             quantity={data.quantity}
             finalquantity={data.quantityfinally}
             id={data.id}
+            offer={data.offer}
+            offerdiscount={data.offerNumber}
             deleteData={deleteData}
+            updateItem={updateItem}
             />
           ))
-          
         }
       </div>
     </div>
