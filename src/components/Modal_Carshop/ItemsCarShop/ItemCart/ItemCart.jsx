@@ -1,8 +1,11 @@
 import { FaTrashAlt } from "react-icons/fa";
+import { useState } from "react";
 
 const ItemCart = (props) => {
+
     const {name, brand, price, quantity, finalquantity, id, deleteData } = props
-  
+
+
   return (
     <div className="modalBodyCar__container">
       <div className="modalBodyImg__container">

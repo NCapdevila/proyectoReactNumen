@@ -1,21 +1,13 @@
 import { useState } from "react";
+import { useContext } from "react";
 import { useEffect } from "react";
+import userItemContext from "../../../contexts/userItemContext";
 import ItemCart from "./ItemCart/ItemCart";
 
 const ItemsCarShop = (props) => {
 
-  const data = JSON.parse(localStorage.getItem("itemsprueba"))
-  const [isDelete, setIsDelete] = useState(false);
-  const deleteData = (id) =>{
-    const newData = data.filter(item => item.id !== id)
-    localStorage.setItem("itemsprueba", JSON.stringify(newData))
-    setIsDelete(!isDelete);
-  }
+const {itemsdata : data, deleteItem: deleteData} = useContext(userItemContext);
 
-  
-  useEffect(() =>{
-    const data = JSON.parse(localStorage.getItem("itemsprueba"))
-  }, [isDelete])
 
   return (
     <div>

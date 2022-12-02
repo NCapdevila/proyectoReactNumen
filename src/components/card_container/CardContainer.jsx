@@ -4,6 +4,11 @@ import './CardContainerStyle.css';
 import Header from './header/Header';
 import axios from 'axios';
 import { SpinnerDotted } from 'spinners-react'
+import { useContext } from 'react';
+import userItemContext from '../../contexts/userItemContext';
+
+
+
 
 
 const CardContainer = (props) => {
@@ -13,29 +18,11 @@ const CardContainer = (props) => {
   /* isLoading es un icono de espera hasta que se obtenga los datos del Json */
   const [isLoading, setIsLoading] = useState(false);
 
-
+  const {agregaritem} = useContext(userItemContext)
 
  
 
-  /* const [datosTraidos, setdatosTraidos] = useState(() =>{
-   const guardarDatos = window.localStorage.getItem("datosCarro");
-    if(guardarDatos){
-      return JSON.parse(guardarDatos)
-    } else {
-      return [];
-    }
-  })
 
-  useEffect(() =>{
-    window.localStorage.setItem("datosCarro", datosTraidos)
-  }, [datosTraidos])
-
-  const addDatos = (datosTraidos) =>{
-    setdatosTraidos([datosTraidos])
-    
-  }
-  products.map(items => (addDatos(items)));
-  */
 
 
   /* Aqui hago la llamada de los productos con Get y AXIOS */
@@ -53,30 +40,7 @@ const CardContainer = (props) => {
   }, []);
 
 
-  const [itemsdata, setItemsData] = useState(() =>{
-    let data = localStorage.getItem("itemsprueba");
-    if(data){
-        return JSON.parse(data)
-    } else {
-        return [];
-    }
-})
 
-useEffect(() =>{
-    localStorage.setItem("itemsprueba", JSON.stringify(itemsdata))
-}, [itemsdata])
-
-const agregaritem =  (items, finalquantity) =>{
-  const istrue = itemsdata.filter(item => item.id === items.id)
-  if(istrue.length > 0){
-    return alert('Ya agregaste este item al producto anteriormente');
-  }
-      const itemsfinal = {
-        ...items,
-        quantityfinally : finalquantity
-      }
-        setItemsData([...itemsdata, itemsfinal])
-}
 
   const headerContainer = 'Productos destacados';
 
@@ -93,7 +57,7 @@ const agregaritem =  (items, finalquantity) =>{
         <div className='cardContainer'>
           {products.map((product, key) =>
             <div key={key}>
-              <Card sale={product} agregaritems={agregaritem} />
+              <Card sale={product}  agregaritems={agregaritem} />
             </div>
           )}
         </div>}
