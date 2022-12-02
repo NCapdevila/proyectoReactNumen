@@ -1,16 +1,20 @@
 
+import { useContext } from "react";
 import {useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { FaShoppingCart } from "react-icons/fa";
+import userItemContext from "../../contexts/userItemContext";
 import ItemsCarShop from "./ItemsCarShop/ItemsCarShop";
 import "./Modal_Carshop.style.css";
 
 
+
 function ModalCarShop() {
   const [lgShow, setLgShow] = useState(false);
+  const {itemsdata}=useContext(userItemContext)
 
-
+  console.log()
 
   return (
 
@@ -18,7 +22,7 @@ function ModalCarShop() {
     <>
       <Button className="carshop__button" onClick={() => setLgShow(true)}>
         <FaShoppingCart />
-        
+        <span className="items-amount">{itemsdata.length}</span>
       </Button>
       <Modal
         size="xl"
