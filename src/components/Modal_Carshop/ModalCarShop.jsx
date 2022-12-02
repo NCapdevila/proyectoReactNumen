@@ -1,8 +1,9 @@
 
-import {useState } from "react";
+import {useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { FaShoppingCart } from "react-icons/fa";
+import userItemContext from "../../contexts/userItemContext";
 import ItemsCarShop from "./ItemsCarShop/ItemsCarShop";
 import "./Modal_Carshop.style.css";
 
@@ -10,8 +11,11 @@ import "./Modal_Carshop.style.css";
 function ModalCarShop() {
   const [lgShow, setLgShow] = useState(false);
 
-
-
+  const {itemsdata : data} = useContext(userItemContext);
+  let price = data.reduce((acc, item) =>{
+    return acc = acc + item.finalprice
+  }, 0);
+  
   return (
 
     
@@ -43,7 +47,7 @@ function ModalCarShop() {
         <Modal.Footer className="modal_footer">
           <div className="modal__footercontainer">
             <div className="totalprice__container">
-              <div>Total: $24600</div>
+              <div>Total: ${price}</div>
             </div>
             <div className="buttonsCart__container">
               <div>

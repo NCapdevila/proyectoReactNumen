@@ -7,32 +7,27 @@ import { useEffect } from 'react';
 
 
 function Modal({ open, onClose, products, agregaritems }) {
-
-  const initialState =  products.offer ? (products.price - (products.price * (products.offerNumber / 100))) : products.price
-  const [quantity, setQuantity] = useState(1)
-  const [finalPrice, setFinalPrice] = useState(initialState);
-
-    const handlerQuantityLess = () =>{
-      handlerFinalPrice()
-      setQuantity(
-        (quantity > 1) ? quantity - 1 : 1
-     )
+  let {offer, offerNumber, price} = products
+  price = offer ? (price - (price*(offerNumber/100))) : price;
+  //const initialState =  products.offer ? (products.price - (products.price * (products.offerNumber / 100))) : products.price
+  const [finalquant, setFinalQuant] = useState(1);
+  const initialprice = price*finalquant;
+  const [finalprice, setFinalPrice] = useState(initialprice);
+  const handlerAddQuantity = () =>{
+    if(finalquant < products.quantity){
+      setFinalQuant(finalquant+1);
+      setFinalPrice(finalprice + price)
     }
 
-    const handlerQuantityAdd = () =>{
-      handlerFinalPrice()
-      setQuantity(
-        (quantity < products.quantity) ? quantity + 1 : products.quantity
-      )
+  }
+  const handlerSubstractQuantity = () =>{
+    if(finalquant>1){
+      setFinalQuant(finalquant-1);
+      setFinalPrice(((finalprice*100)- (price*100))/100)
     }
+  }
+  //console.log(`finalquant ${quantity}`)
 
-    const handlerFinalPrice = () =>{
-      if(products.offer){
-        setFinalPrice(quantity * (products.price - (products.price * (products.offerNumber / 100))))
-      } else {
-        setFinalPrice(quantity * products.price)
-      }
-    }
     /*useEffect(() =>(
       
       console.log(`cantidad: ${quantity} y precio final ${finalPrice}`)
@@ -58,25 +53,26 @@ function Modal({ open, onClose, products, agregaritems }) {
             <p>Disponibles: <b>{products.quantity}</b></p>
           </div>
           <div className="btnContainer">
-            <button className="btnPrimary" onClick={() => handlerQuantityLess()}>
+            <button className="btnPrimary" onClick={() => handlerSubstractQuantity()}>
               <span className="bold">-</span>
             </button>
             <div className='showQuantity'>
-              <p>{quantity}</p>
+              <p>{finalquant}</p>
             </div>
-            <button className="btnOutline" onClick={() => handlerQuantityAdd()}>
+            <button className="btnOutline" onClick={() => handlerAddQuantity()}>
               <span className='bold'>+</span>
             </button>
           </div>
           <div className="monto">
             {products.offer ?
               (<p className='monto_valor'> ${
-                quantity * (products.price - (products.price * (products.offerNumber / 100)))
+                //quantity * (products.price - (products.price * (products.offerNumber / 100)))
+                finalprice
                 }</p>)
-              : <p className='monto_valor'>$ {quantity * products.price}</p>}
+              : <p className='monto_valor'>$ {finalprice}</p>}
           </div>
           <div className="modalRight_button">
-            <button  className='modalBtn' onClick={() => agregaritems(products, quantity )}>Agregar al carrito</button>
+            <button  className='modalBtn' onClick={() => agregaritems(products, finalquant, finalprice )}>Agregar al carrito</button>
           </div>
         </div>
       </div>
