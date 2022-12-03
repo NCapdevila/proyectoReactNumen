@@ -7,6 +7,7 @@ import { FaAngleDown, FaAngleUp, FaRegUser } from "react-icons/fa";
 import SearchBar from "../SearchBar/SearchBar";
 
 
+
 const NavBarLinkContainer = (props) => {
   const [dropdown, setDropdown] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
@@ -88,6 +89,7 @@ const NavBarLinkContainer = (props) => {
           {/*<div className={`mobile__icons ${props.estado ? "active" : "closed"}`}>
           <NavBarIcon />
           </div>*/}
+
         </div>
         </div>
       </div>

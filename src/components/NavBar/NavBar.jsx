@@ -5,6 +5,7 @@ import { FaBars} from 'react-icons/fa'
 import NavBarLinkContainer from "./NavBarLinkContainer/NavBarLinkContainer";
 import NavBarIcons from "./NavBarIcons/NavBarIcons";
 import NavBarHeader from './NavBarHeader/NavBarHeader';
+import ModalCarShop from '../Modal_Carshop/ModalCarShop';
 
 
 
@@ -30,12 +31,13 @@ const NavBar = () => {
         <div className="LogoNavBar__container">
           <span>Vopero</span>
         </div>
-
+    
         
         <NavBarLinkContainer estado={showMobileMenu}></NavBarLinkContainer>
-        <div  className='nav__icons' onClick={() => setShowMobileMenu(!showMobileMenu)}>
+        <div  className='nav__icons'>
+            <ModalCarShop />
             {
-              showMobileMenu ?  <AiOutlineClose /> : <FaBars />
+              showMobileMenu ?  <AiOutlineClose  onClick={() => setShowMobileMenu(!showMobileMenu)} /> : <FaBars onClick={() => setShowMobileMenu(!showMobileMenu)} />
             }
         </div>
         <div className='lateralNavBar__container'>
