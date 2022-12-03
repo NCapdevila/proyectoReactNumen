@@ -21,7 +21,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: 1;
   backdrop-filter: blur(3px);
 }
 
@@ -140,6 +140,74 @@
   border: none;
   margin-bottom: 1.5rem;
 }
+
+.showitemexistsactive{
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  background-color: rgb(230, 230, 230);
+  z-index: 120;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  justify-content: space-around;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.infoitemexist{
+  display: flex;
+  justify-content: center;
+  width: 450px;
+  align-items: center;
+  flex-flow: column;
+}
+.btn-confirm-items{
+  background-color: #000;
+}
+.btn-vos{
+  background-color: #000;
+  padding: 10px;
+  color: #ffffff;
+}
+.showitemexistsclosed{
+  display: none;
+}
+.shownotexistsactive{
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  background-color: rgb(230, 230, 230);
+  z-index: 120;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  justify-content: space-around;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.shownotexistsclosed{
+  display: none;
+}
+
+.checkconfirm{
+  font-size: 100px;
+  color: rgb(41, 224, 41);
+}
+.errorconfirm{
+  color: rgb(224, 56, 56);
+}
+
+
 
 
 @media screen and (max-width: 500px) {

@@ -7,7 +7,6 @@ export const itemsCartDataContext = createContext();
 export function ItemsCartContext (props) {
     const {children} = props;
 
-    
     const [itemsdata, setItemsData] = useState(() =>{
         let data = localStorage.getItem("itemscart");
         if(data){
@@ -57,14 +56,16 @@ export function ItemsCartContext (props) {
       const istrue = itemsdata.filter(item => item.id === items.id)
       if(istrue.length > 0){
         /*return alert('Ya agregaste este item al producto anteriormente');*/
-        return alert("Su producto ya fue añadido");
+        return 0;
       }
           const itemsfinal = {
             ...items,
             quantityfinally : finalquantity,
             finalprice
           }
+          
             setItemsData([...itemsdata, itemsfinal])
+
     }
 
     const deleteItem = id =>{

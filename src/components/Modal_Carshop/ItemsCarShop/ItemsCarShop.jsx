@@ -1,12 +1,11 @@
-import { useState } from "react";
+
 import { useContext } from "react";
-import { useEffect } from "react";
 import userItemContext from "../../../contexts/userItemContext";
 import ItemCart from "./ItemCart/ItemCart";
 
 const ItemsCarShop = (props) => {
 
-const {itemsdata : data, update ,  deleteItem: deleteData, updateItem} = useContext(userItemContext);
+const {itemsdata : data , deleteItem: deleteData, updateItem} = useContext(userItemContext);
 
 
   return (
