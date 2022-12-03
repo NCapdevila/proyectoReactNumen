@@ -139,7 +139,7 @@ function ModalCarShop() {
                 className="modalCarShopTitle"
                 id="example-modal-sizes-title-lg"
               >
-                Mi carro de compras
+                Mi carrito de compras
               </Modal.Title>
             </Modal.Header>
             <Modal.Body className="modal_items_body">
@@ -213,7 +213,7 @@ function ModalCarShop() {
           <ItemsCarShop/>
           
         }
-         <FontAwesomeIcon icon={["far", "coffee"]} />
+        <FontAwesomeIcon icon={["far", "coffee"]} />
         </Modal.Body>
         <Modal.Footer className="modal_footer">
           <div className="modal__footercontainer">
