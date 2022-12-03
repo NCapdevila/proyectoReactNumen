@@ -78,6 +78,51 @@
       "offer": false,
       "offerNumber": 0,
       "imageRoot": 3
-    }
+    },
+    [
+      {
+        "id": 3,
+        "user": "Ariana",
+        "brand": "Diadora",
+        "type": "Polera",
+        "quantity": 2,
+        "price": 1200,
+        "offer": false,
+        "offerNumber": 0,
+        "imageRoot": 3,
+        "quantityfinally": 1,
+        "finalprice": 1200
+      }
+    ],
+    [
+      {
+        "id": 3,
+        "user": "Ariana",
+        "brand": "Diadora",
+        "type": "Polera",
+        "quantity": 2,
+        "price": 1200,
+        "offer": false,
+        "offerNumber": 0,
+        "imageRoot": 3,
+        "quantityfinally": 1,
+        "finalprice": 1200
+      }
+    ],
+    [
+      {
+        "id": 3,
+        "user": "Ariana",
+        "brand": "Diadora",
+        "type": "Polera",
+        "quantity": 2,
+        "price": 1200,
+        "offer": false,
+        "offerNumber": 0,
+        "imageRoot": 3,
+        "quantityfinally": 1,
+        "finalprice": 1200
+      }
+    ]
   ]
 }
