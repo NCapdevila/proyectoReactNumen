@@ -19,7 +19,7 @@ const SearchBar = () =>{
         <input
           className="inputNavBar"
           type="text"
-          placeholder="Ingresa para buscar"
+          placeholder="Buscar productos..."
         />
       </div>
     )
