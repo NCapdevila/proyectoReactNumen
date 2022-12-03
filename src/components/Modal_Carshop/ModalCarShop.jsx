@@ -1,4 +1,6 @@
 
+import { faCheckCircle, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import {useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
@@ -10,11 +12,15 @@ import "./Modal_Carshop.style.css";
 
 
 
+
 function ModalCarShop() {
   const [lgShow, setLgShow] = useState(false);
-
+  const BASE_URL = `http://localhost:9000/itemsCart`;
   const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
   const [fullscreen, setFullscreen] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false)
+  const [confirmedPurchase, setConfirmedPurchase] = useState(false);
 
   function handleShow(breakpoint) {
     setFullscreen(breakpoint);
@@ -35,13 +41,17 @@ const handlermodal = () =>{
 
 const sendinfoCart = async () =>{
   try{
-    let res = await axios.post("http://localhost:9000/itemsCart", itemsdata)
-    console.log(res)
+    let res = await axios.post(BASE_URL, itemsdata)
+    if(res.status === 201){
+      setIsLoading(true)
+    }
   }
   catch(e) {
     console.log(e)
   }
   finally{
+    setTimeout(() => setIsLoading(false), 2000)
+    setTimeout(() => setConfirmedPurchase(true), 2000)
     localStorage.removeItem("itemscart");
     updatecart();
   }
@@ -66,7 +76,32 @@ const sendinfoCart = async () =>{
         aria-labelledby="example-custom-modal-styling-title"
         className="pruebaxd"
       >
-        <Modal.Header className="ModalHeaderCarShop" closeButton>
+      {
+        confirmedPurchase ?           
+        
+        <Modal.Body closeButton
+        
+        className="modal_items_body confirmpurchase_container">
+          <Modal.Header className="ModalHeaderCarShop" onClick={() => setConfirmedPurchase(false)} closeButton></Modal.Header>
+        <div className="confirmpurchase">
+        <FontAwesomeIcon icon={faCheckCircle} className="checkconfirm"/>
+          <p>Se compra fue confirmada</p>
+        </div>
+        </Modal.Body>
+        :
+        isLoading ? 
+        <div>        
+          <Modal.Body
+        className="modal_items_body isloading__container">
+        <div className="isloadingpurchase">
+        <FontAwesomeIcon icon={faSpinner} className="fa-spin spinner"/>
+          <p>Su compra esta siendo confirmada...</p>
+        
+        </div>
+        
+        </Modal.Body>
+  </div> : 
+        <div><Modal.Header className="ModalHeaderCarShop" closeButton>
           <Modal.Title
             className="modalCarShopTitle"
             id="example-modal-sizes-title-lg"
@@ -77,13 +112,18 @@ const sendinfoCart = async () =>{
         <Modal.Body
         className="modal_items_body">
 
-        <ItemsCarShop/>
-
+        {itemsdata.length === 0 ? 
+          <div className="emptycart">Su carrito esta vacio</div>
+          :
+          <ItemsCarShop/>
+          
+        }
+         <FontAwesomeIcon icon={["far", "coffee"]} />
         </Modal.Body>
         <Modal.Footer className="modal_footer">
           <div className="modal__footercontainer">
             <div className="totalprice__container">
-              <div>Total: ${price}</div>
+              <div>Total: ${price.toFixed(2)}</div>
             </div>
             <div className="buttonsCart__container">
               <div className="cancelbutton_container">
@@ -96,6 +136,57 @@ const sendinfoCart = async () =>{
             </div>
           </div>
         </Modal.Footer>
+        </div>
+      }
+        {/*isLoading ? 
+        <div>        
+          <Modal.Body
+        className="modal_items_body">
+        <div className="isloadingpurchase">
+        <FontAwesomeIcon icon={faSpinner} className="fa-spin spinner"/>
+          <p>Su compra esta siendo confirmada...</p>
+        
+        </div>
+        
+        </Modal.Body>
+  </div> : 
+        <div><Modal.Header className="ModalHeaderCarShop" closeButton>
+          <Modal.Title
+            className="modalCarShopTitle"
+            id="example-modal-sizes-title-lg"
+          >
+            Mi carro de compras
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body
+        className="modal_items_body">
+
+        {itemsdata.length === 0 ? 
+          <div className="emptycart">Su carrito esta vacio</div>
+          :
+          <ItemsCarShop/>
+          
+        }
+         <FontAwesomeIcon icon={["far", "coffee"]} />
+        </Modal.Body>
+        <Modal.Footer className="modal_footer">
+          <div className="modal__footercontainer">
+            <div className="totalprice__container">
+              <div>Total: ${price.toFixed(2)}</div>
+            </div>
+            <div className="buttonsCart__container">
+              <div className="cancelbutton_container">
+                <Button className='cancelButton' onClick={() => setLgShow(false)}>Cancelar</Button>{" "}
+              </div>
+              <div className="buttonmobile__container">
+                <Button className='ButtonCart' variant="info" onClick={() => setLgShow(false)}>Continuar comprando</Button>{" "}
+                <Button className='ButtonCart2' variant="dark" onClick={() => sendinfoCart()} >Finalizar compra</Button>{" "}
+              </div>
+            </div>
+          </div>
+        </Modal.Footer>
+        </div>
+      */}
       </Modal>
     </>
   );
