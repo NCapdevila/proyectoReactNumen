@@ -35,6 +35,21 @@ const ItemCart = (props) => {
       <div className="modalBodyImg__container">
       <img src={`../images/${img}.jpg`} className='ImageCard' alt="Ropa de Marca" />
       </div>
+      <div className="itemName namecontainer">
+        <span className="nameItem__container">{name} {brand}</span>
+      </div>
+      <div className="totalItems totalitemscontainer">
+        <span className="totalItemsTitle">Cantidad:</span>
+        <div className="changeTotalItems">
+          <button className="buttontotalItems buttonitem-1" onClick={() => handlerSubstractQuantity()}>-</button>
+          <div className="numberItems">{finalquant}</div>
+          <button className="buttontotalItems buttonitem-2" onClick={() => handlerAddQuantity() }>+</button>
+        </div>
+      </div>
+      <div className="priceItem totalpricecontainer">
+        <span>${finalprice}</span>
+      </div>
+      <div className="itemsinfoMobile">
       <div className="itemName">
         <span className="nameItem__container">{name} {brand}</span>
       </div>
@@ -49,7 +64,13 @@ const ItemCart = (props) => {
       <div className="priceItem">
         <span>${finalprice}</span>
       </div>
-      <div className="deleteItem">
+      <div className="deleteItem trashcontainer__mobile">
+        <button onClick={() => deleteData(id)}>
+          <FaTrashAlt />
+        </button>
+      </div>
+      </div>
+      <div className="deleteItem trashcontainer">
         <button onClick={() => deleteData(id)}>
           <FaTrashAlt />
         </button>
