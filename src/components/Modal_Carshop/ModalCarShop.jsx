@@ -1,4 +1,5 @@
 
+import axios from "axios";
 import {useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -14,14 +15,12 @@ function ModalCarShop() {
 
   const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
   const [fullscreen, setFullscreen] = useState(true);
-  const [show, setShow] = useState(false);
 
   function handleShow(breakpoint) {
     setFullscreen(breakpoint);
-    setShow(true);
   }
   
-  const {itemsdata}=useContext(userItemContext)
+  const {itemsdata, updatecart}=useContext(userItemContext)
 
   const {itemsdata : data} = useContext(userItemContext);
   let price = data.reduce((acc, item) =>{
@@ -32,6 +31,21 @@ function ModalCarShop() {
 const handlermodal = () =>{
   setLgShow(true)
   handleShow(values[3])
+}
+
+const sendinfoCart = async () =>{
+  try{
+    let res = await axios.post("http://localhost:9000/itemsCart", itemsdata)
+    console.log(res)
+  }
+  catch(e) {
+    console.log(e)
+  }
+  finally{
+    localStorage.removeItem("itemscart");
+    updatecart();
+  }
+
 }
   return (
 
@@ -72,12 +86,12 @@ const handlermodal = () =>{
               <div>Total: ${price}</div>
             </div>
             <div className="buttonsCart__container">
-              <div>
+              <div className="cancelbutton_container">
                 <Button className='cancelButton' onClick={() => setLgShow(false)}>Cancelar</Button>{" "}
               </div>
-              <div>
+              <div className="buttonmobile__container">
                 <Button className='ButtonCart' variant="info" onClick={() => setLgShow(false)}>Continuar comprando</Button>{" "}
-                <Button className='ButtonCart2' variant="dark" >Finalizar compra</Button>{" "}
+                <Button className='ButtonCart2' variant="dark" onClick={() => sendinfoCart()} >Finalizar compra</Button>{" "}
               </div>
             </div>
           </div>

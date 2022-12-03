@@ -9,7 +9,7 @@ export function ItemsCartContext (props) {
 
     
     const [itemsdata, setItemsData] = useState(() =>{
-        let data = localStorage.getItem("itemsprueba");
+        let data = localStorage.getItem("itemscart");
         if(data){
             return JSON.parse(data)
         } else {
@@ -50,7 +50,7 @@ export function ItemsCartContext (props) {
     }*/
 
     useEffect(() =>{
-        localStorage.setItem("itemsprueba", JSON.stringify(itemsdata))
+        localStorage.setItem("itemscart", JSON.stringify(itemsdata))
     }, [itemsdata])
     
     const agregaritem =  (items, finalquantity, finalprice) =>{
@@ -72,7 +72,9 @@ export function ItemsCartContext (props) {
       setItemsData([...filtreditems]);
 
     }
-
+    const updatecart = () =>{
+      setItemsData([]);
+    }
     const updateItem = (id, finalprice, finalquant) =>{
       const foundindex = itemsdata.findIndex(todo => {
         return todo.id === id;
@@ -89,7 +91,8 @@ export function ItemsCartContext (props) {
           update,
           agregaritem,
           deleteItem,
-          updateItem
+          updateItem,
+          updatecart
           }}>
           {children}
         </userItemContext.Provider>
