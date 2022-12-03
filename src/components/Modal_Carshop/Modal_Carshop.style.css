@@ -212,6 +212,38 @@
     display: none;
 }
 
+.emptycart{
+    margin: auto;
+    font-size: 50px;
+}
+
+.isloadingpurchase{
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 30px;
+}
+.spinner{
+    font-size: 100px;
+}
+.checkconfirm{
+    font-size: 100px;
+    color: rgb(41, 224, 41);
+}
+.confirmpurchase{
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 30px;
+}
+.confirmpurchase_container{
+    height: 500px;
+}
+.isloading__container{
+    height: 500px;
+}
 @media (max-width: 992px) {
     .itemsinfoMobile {
         display: flex;

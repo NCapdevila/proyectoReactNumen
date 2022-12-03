@@ -76,8 +76,8 @@ export function ItemsCartContext (props) {
       setItemsData([]);
     }
     const updateItem = (id, finalprice, finalquant) =>{
-      const foundindex = itemsdata.findIndex(todo => {
-        return todo.id === id;
+      const foundindex = itemsdata.findIndex(item => {
+        return item.id === id;
       })
       itemsdata[foundindex]["finalprice"] = finalprice 
       itemsdata[foundindex]["quantityfinally"] = finalquant 
