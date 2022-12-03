@@ -244,6 +244,10 @@
 .isloading__container{
     height: 500px;
 }
+
+.errorconfirm{
+    color: rgb(255, 43, 43);
+}
 @media (max-width: 992px) {
     .itemsinfoMobile {
         display: flex;
