@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
 .title{
     color: black;
-    font-size: 3em;
+    font-size: 2.5em;
+    font-family: 'Rubik', sans-serif;
 }
 
 .paragraph{
     color: black;
     font-size: 1.5em;
     font-weight: 500;
+    font-family: 'Rubik', sans-serif;
 }
 
 
@@ -19,6 +23,15 @@
 @media (max-width: 700px){
     .carousel__container{
         margin-top: 120px;
+    }
+    .title{
+        height: auto;
+        font-size: 1rem;
+        padding: 0px;
+        margin: 0px;
+    }
+    .paragraph{
+        display: none;
     }
 }
 
