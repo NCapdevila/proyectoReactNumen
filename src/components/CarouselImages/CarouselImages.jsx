@@ -20,7 +20,7 @@ function CarouselImages() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
+      <img
           className="d-block w-100"
           src={banner_2_Desktop}
           alt="Second slide"/>
@@ -31,7 +31,7 @@ function CarouselImages() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
+      <img
           className="d-block w-100"
           src= {banner_3_Desktop}
           alt="Third slide"/>
