@@ -5,6 +5,7 @@
 }
 .mySwiper{
   padding: 70px 50px;
+  z-index: 0;
 }
 
 .swiper-slide img {

@@ -18,6 +18,16 @@ function Modal({ open, onClose, products, agregaritems }) {
   const [showItemExists, setShowItemExists] = useState(false);
   const [itemnotexists, setItemNotExists] = useState(false);
   const { itemsdata } = useContext(userItemContext);
+  const [fixed, setFixed] = useState(false);
+
+  const setFix = () =>{
+    if(window.scrollY >= 1){
+      setFixed(true);
+    } else {
+      setFixed(false);
+    }
+  };
+  window.addEventListener("scroll", setFix);
   const handlerAddQuantity = () => {
     if (finalquant < products.quantity) {
       setFinalQuant(finalquant + 1);
@@ -53,7 +63,7 @@ function Modal({ open, onClose, products, agregaritems }) {
 
   return (
     open && (
-      <div onClick={onClose} className="overlay">
+      <div onClick={onClose} className={`${fixed ? 'overlay' : 'overlay fixed'}`}>
         <div
           onClick={(e) => {
             e.stopPropagation();
