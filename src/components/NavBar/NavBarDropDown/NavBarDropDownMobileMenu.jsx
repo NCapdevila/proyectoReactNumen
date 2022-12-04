@@ -6,7 +6,6 @@ import NavBarDropDownItemsContainer from './NavBarDropDownItemsContainer';
 const NavBarDropDownMobileMenu = (props) =>{
     const { links, itsFor } = props;
     const [selected, setSelected] = useState(null);
- 
     const toggle= (index) =>{
         if(selected === index){
             return setSelected(null);
@@ -38,25 +37,27 @@ const NavBarDropDownMobileMenu = (props) =>{
     ]
 
     return(
-        <div className={`navBarDropDownMobileMenu__container ${props.estado ? "active" : "closed"}`}>
+        <div key={100}  className={`navBarDropDownMobileMenu__container ${props.estado ? "active" : "closed"}`}>
 
-
+        <ul>
                 {
                     nameItems.map((item, index) =>{
+
                         return(
-                        <>
+                        <div key={index}>
                         <div className='itemMenuMobile_container'  onClick={() => {toggle(index)}}>
                             <li key={item.id}>{item.nameItem}</li>
                             <ArrowMobile state={selected === index ? true : false}/>
                         </div>
                         <div className={`${selected === index ? 'showContent' : 'disableContent'}`}>
-                            {item.item}
+                            <li key={item.id}>{item.item}</li>
                             </div>
-                        </>
+                        </div>
                         )
                         
                     })
                 }
+                </ul>
         </div>
     )
 }

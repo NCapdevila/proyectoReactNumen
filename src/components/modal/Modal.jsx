@@ -54,7 +54,6 @@ function Modal({ open, onClose, products, agregaritems }) {
       setShowItemExists(false)
     }
   }
-  console.log('Valor de itemnot exists', itemnotexists)
   const handlershowitem = () =>{
     setItemNotExists(false)
     setShowItemExists(false)
