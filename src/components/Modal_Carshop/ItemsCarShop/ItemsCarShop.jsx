@@ -13,7 +13,8 @@ const {itemsdata : data , deleteItem: deleteData, updateItem} = useContext(userI
       <div>
         {
           data.map(data =>(
-            <ItemCart 
+            <ItemCart
+            key={data.id}
             name={data.user}
             img={data.imageRoot}
             brand={data.brand}

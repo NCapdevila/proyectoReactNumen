@@ -77,7 +77,7 @@ function ModalCarShop() {
         onHide={() => setLgShow(false)}
         //aria-labelledby="example-modal-sizes-title-lg"
         aria-labelledby="example-custom-modal-styling-title"
-        className="pruebaxd"
+        
       >
         {isError ? (
           isLoading ? (
@@ -93,12 +93,14 @@ function ModalCarShop() {
               </Modal.Body>
             </div>
           ) : (
-            <Modal.Body className="modal_items_body confirmpurchase_container">
+            <>
               <Modal.Header
                 className="ModalHeaderCarShop"
                 onClick={() => handlerErrorPurchase()}
                 closeButton
               ></Modal.Header>
+            <Modal.Body className="modal_items_body confirmpurchase_container">
+              <button>X</button>
               <div className="confirmpurchase">
                 <FontAwesomeIcon
                   icon={faXmarkCircle}
@@ -107,22 +109,27 @@ function ModalCarShop() {
                 <p>Hubo un error al tratar de realizar la compra</p>
               </div>
             </Modal.Body>
+            </>
           )
         ) : confirmedPurchase ? (
-          <Modal.Body
-            closeButton
-            className="modal_items_body confirmpurchase_container"
-          >
-            <Modal.Header
+          <>
+              <Modal.Header
               className="ModalHeaderCarShop"
               onClick={() => setConfirmedPurchase(false)}
               closeButton
             ></Modal.Header>
+            
+          <Modal.Body
+            
+            className="modal_items_body confirmpurchase_container"
+          >
+          
             <div className="confirmpurchase">
               <FontAwesomeIcon icon={faCheckCircle} className="checkconfirm" />
               <p>Se compra fue confirmada</p>
             </div>
           </Modal.Body>
+          </>
         ) : isLoading ? (
           <div>
             <Modal.Body className="modal_items_body isloading__container">
@@ -184,55 +191,7 @@ function ModalCarShop() {
             </Modal.Footer>
           </div>
         )}
-        {/*isLoading ? 
-        <div>        
-          <Modal.Body
-        className="modal_items_body">
-        <div className="isloadingpurchase">
-        <FontAwesomeIcon icon={faSpinner} className="fa-spin spinner"/>
-          <p>Su compra esta siendo confirmada...</p>
-        
-        </div>
-        
-        </Modal.Body>
-  </div> : 
-        <div><Modal.Header className="ModalHeaderCarShop" closeButton>
-          <Modal.Title
-            className="modalCarShopTitle"
-            id="example-modal-sizes-title-lg"
-          >
-            Mi carro de compras
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body
-        className="modal_items_body">
 
-        {itemsdata.length === 0 ? 
-          <div className="emptycart">Su carrito esta vacio</div>
-          :
-          <ItemsCarShop/>
-          
-        }
-        <FontAwesomeIcon icon={["far", "coffee"]} />
-        </Modal.Body>
-        <Modal.Footer className="modal_footer">
-          <div className="modal__footercontainer">
-            <div className="totalprice__container">
-              <div>Total: ${price.toFixed(2)}</div>
-            </div>
-            <div className="buttonsCart__container">
-              <div className="cancelbutton_container">
-                <Button className='cancelButton' onClick={() => setLgShow(false)}>Cancelar</Button>{" "}
-              </div>
-              <div className="buttonmobile__container">
-                <Button className='ButtonCart' variant="info" onClick={() => setLgShow(false)}>Continuar comprando</Button>{" "}
-                <Button className='ButtonCart2' variant="dark" onClick={() => sendinfoCart()} >Finalizar compra</Button>{" "}
-              </div>
-            </div>
-          </div>
-        </Modal.Footer>
-        </div>
-      */}
       </Modal>
     </>
   );
