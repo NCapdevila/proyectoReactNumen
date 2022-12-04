@@ -39,13 +39,13 @@ function Footer(){
                     <li>Atención personalizada:</li>
                 </ul>
                 <ul className='container-list-info'>
-                    <li><FaWhatsapp /> +598 96 300 060</li>
+                    <li><FaWhatsapp /> +54 11 4654829</li>
                     <li>Lunes a viernes de 9 a 23hs | Sábados de 10 a 18hs</li>   
                     <li>Domingos de 10 a 14hs</li>
-                    <li>contacto@vopero.com </li>     
+                    <li>contacto@jober.com </li>     
                 </ul>   
                 <ul className='container-list-info'>
-                    <li>Marco Bruto 1369, Montevideo, Uruguay</li>
+                    <li>Av Sarmiento 1425, Buenos Aires - Argentina</li>
                     <li>Lunes a viernes de 10 a 19hs | Sábados de 9 a 13hs</li> 
                 </ul>
                 
@@ -62,7 +62,7 @@ function Footer(){
                     </div>
                 </div>
                 <div className='container-copy'>
-                &copy;{new Date().getFullYear()}, VOPERO | Todos los derechos reservados
+                &copy;{new Date().getFullYear()}, Jober | Todos los derechos reservados
                 </div>
                 <div className='container-payment'>
                 <FaCcVisa style={{fontSize : '30px'}} />

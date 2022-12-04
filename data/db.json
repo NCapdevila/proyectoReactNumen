@@ -57,6 +57,20 @@
     }
   ],
   "itemsCart": [
-
+    [
+      {
+        "id": 1,
+        "user": "1st post",
+        "brand": "Levis",
+        "type": "Campera",
+        "quantity": 3,
+        "price": 899,
+        "offer": true,
+        "offerNumber": 39,
+        "imageRoot": 1,
+        "quantityfinally": 1,
+        "finalprice": 548.39
+      }
+    ]
   ]
 }

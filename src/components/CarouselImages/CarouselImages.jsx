@@ -9,7 +9,7 @@ import banner_3_Desktop from './images/banner_3_Desktop.png';
 function CarouselImages() {
   return (
     <Carousel className='carousel__container' fade>
-      <Carousel.Item>
+      <Carousel.Item className='item_container'>
         <img
           className="d-block w-100"
           src= {banner_1_Desktop}
