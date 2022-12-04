@@ -57,6 +57,21 @@
     }
   ],
   "itemsCart": [
-    
+    [],
+    [
+      {
+        "id": 2,
+        "user": "Anita",
+        "brand": "Desigual",
+        "type": "Short",
+        "quantity": 4,
+        "price": 1000,
+        "offer": false,
+        "offerNumber": 0,
+        "imageRoot": 2,
+        "quantityfinally": 1,
+        "finalprice": 1000
+      }
+    ]
   ]
 }

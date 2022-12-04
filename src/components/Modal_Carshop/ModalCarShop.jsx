@@ -137,7 +137,7 @@ function ModalCarShop() {
           
             <div className="confirmpurchase">
               <FontAwesomeIcon icon={faCheckCircle} className="checkconfirm" />
-              <p>Se compra fue confirmada</p>
+              <p>Su compra fue confirmada</p>
             </div>
           </Modal.Body>
           </>
