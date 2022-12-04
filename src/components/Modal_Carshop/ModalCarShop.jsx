@@ -100,7 +100,7 @@ function ModalCarShop() {
                 closeButton
               ></Modal.Header>
             <Modal.Body className="modal_items_body confirmpurchase_container">
-              <button>X</button>
+            
               <div className="confirmpurchase">
                 <FontAwesomeIcon
                   icon={faXmarkCircle}
