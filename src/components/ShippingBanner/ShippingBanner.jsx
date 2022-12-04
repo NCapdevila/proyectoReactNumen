@@ -5,7 +5,6 @@ import back from "./icons/back.svg";
 import tag from "./icons/tag.svg";
 import box from "./icons/box.svg";
 import coin from "./icons/coin.svg";
-import mobile from "./icons/mobile.svg";
 
 function ShippingBanner() {
   return (
@@ -39,14 +38,6 @@ function ShippingBanner() {
         <Card.Body className="bodybanner">
           <Card.Title className="titlebanner">PRECIOS INCREÍBLES</Card.Title>
           <Card.Text className="textbanner">HASTA 80% OFF</Card.Text>
-        </Card.Body>
-      </Card>
-
-      <Card className="cardbanner">
-        <Card.Img className="imgbanner" src={mobile} />
-        <Card.Body className="bodybanner">
-          <Card.Title className="titlebanner">DESCARGÁ LA APP</Card.Title>
-          <Card.Text className="textbanner">IOS & ANDROID</Card.Text>
         </Card.Body>
       </Card>
     </div>

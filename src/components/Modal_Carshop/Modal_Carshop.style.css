@@ -37,6 +37,7 @@
 }
 
 .modal_items_body {
+    background-color: rgb(229, 229, 229);
     height: 450px;
     overflow-y: auto;
     display: flex;
@@ -49,12 +50,8 @@
     width: 100%;
     justify-content: space-around;
     background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(13.5px);
-    -webkit-backdrop-filter: blur(13.5px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-
 }
 
 .modalBodyImg__container img {
@@ -101,7 +98,10 @@
     display: flex;
     font-size: 25px;
     align-items: center;
+}
 
+.deleteItem button {
+    background-color: white;
 }
 
 .totalItemsTitle {
@@ -136,10 +136,6 @@
     border-bottom-right-radius: 40px;
 }
 
-.modal_footer {
-    border-top: 1px solid rgb(82, 80, 80);
-}
-
 .modal__footercontainer {
     display: flex;
     flex-flow: nowrap column;
@@ -148,7 +144,10 @@
     width: 90%;
     height: 100px;
 }
-
+.modalBodyCar__container{
+    background-color: white;
+    margin-bottom: 1rem;
+}
 .buttonsCart__container {
     display: flex;
     justify-content: space-between;
@@ -212,45 +211,60 @@
     display: none;
 }
 
-.emptycart{
+.emptycart {
     margin: auto;
-    font-size: 50px;
+    font-size: 30px;
 }
 
-.isloadingpurchase{
+.isloadingpurchase {
     margin: 0 auto;
     display: flex;
     flex-flow: column;
     align-items: center;
     gap: 30px;
 }
-.spinner{
+
+.spinner {
     font-size: 100px;
 }
-.checkconfirm{
+
+.checkconfirm {
     font-size: 100px;
     color: rgb(41, 224, 41);
 }
-.confirmpurchase{
+
+.confirmpurchase {
     margin: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
     gap: 30px;
 }
-.confirmpurchase_container{
-    height: 500px;
-}
-.isloading__container{
+
+.confirmpurchase_container {
     height: 500px;
 }
 
-.errorconfirm{
+.isloading__container {
+    height: 500px;
+}
+
+.errorconfirm {
     color: rgb(255, 43, 43);
 }
 
 
 @media (max-width: 992px) {
+    .modalBodyCar__container{
+        width: 95%;
+    }
+    .modal_items_body{
+        align-content: center;
+    }
+    .modal_footer {
+        height: auto;
+        background-color: white;
+    }
     .itemsinfoMobile {
         display: flex;
     }
@@ -258,19 +272,31 @@
     .namecontainer {
         display: none;
     }
-    
-    .totalitemscontainer{
+
+    .totalitemscontainer {
         display: none;
     }
-    .totalpricecontainer{
+
+    .totalpricecontainer {
         display: none;
     }
-    .trashcontainer{
+
+    .trashcontainer {
         display: none;
     }
 }
 
 @media (max-width: 680px) {
+    .modalBodyCar__container{
+        width: 95%;
+    }
+    .modal_items_body{
+        align-content: center;
+    }
+    .modal_footer {
+        height: auto;
+        background-color: white;
+    }
     .itemsinfoMobile {
         position: relative;
         display: flex;
@@ -280,7 +306,8 @@
         height: 300px;
         width: 300px;
     }
-    .modalBodyImg__container{
+
+    .modalBodyImg__container {
         display: flex;
         flex-flow: column;
         justify-content: center;
@@ -289,63 +316,81 @@
     .namecontainer {
         display: none;
     }
-    
-    .totalitemscontainer{
+
+    .totalitemscontainer {
         display: none;
     }
-    .totalpricecontainer{
+
+    .totalpricecontainer {
         display: none;
     }
-    .trashcontainer{
+
+    .trashcontainer {
         display: none;
     }
-    .trashcontainer__mobile{
+
+    .trashcontainer__mobile {
         position: absolute;
         right: 0;
         bottom: 0;
         margin-right: 20px;
         margin-bottom: 20px;
     }
-    .modal__footercontainer{
+
+    .modal__footercontainer {
         display: flex;
         flex-flow: column;
         height: 240px;
         overflow-y: auto;
     }
-    .buttonsCart__container{
+
+    .buttonsCart__container {
         display: flex;
         flex-flow: column;
         align-items: center;
-        
+
     }
-    .buttonsCart__container button{
+
+    .buttonsCart__container button {
         width: 100%;
         margin: 0;
         margin-bottom: 15px;
         border-radius: 10px !important;
     }
-    .ButtonCart{
+
+    .ButtonCart {
         order: 1;
     }
-    .cancelbutton_container{
+
+    .cancelbutton_container {
 
         width: 100%;
         display: flex;
         flex-flow: column;
         align-items: center;
         order: 2;
-       
+
     }
-    .cancelButton button{
+
+    .cancelButton button {
         border: 1px solid #000;
-        
+
     }
-    .buttonmobile__container{
+
+    .buttonmobile__container {
 
         display: flex;
         flex-flow: column;
         align-items: center;
         width: 100%;
         order: 1;
+    }
+
+    .modal_footer {
+        height: auto;
+        background-color: white;
+    }
+    .modal_items_body{
+        align-content: center;
     }
 }
