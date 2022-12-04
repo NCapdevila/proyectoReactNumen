@@ -49,7 +49,7 @@ export default function SwiperIg() {
   return (
     <>
         <div className="container-texto-swiper">
-            <h2 className="ig-text">@Vopero <span className="ig-text2">en Instagram</span></h2>
+            <h2 className="ig-text">@Jober <span className="ig-text2">en Instagram</span></h2>
         </div>
         <Swiper
         slidesPerGroup={1}

@@ -29,7 +29,7 @@ const NavBar = () => {
       <NavBarHeader />
       <div className={`navBar__Container ${fixed ? 'navbar_fixed' : 'navbar_notfixed'}`}>
         <div className="LogoNavBar__container">
-          <span>Vopero</span>
+          <span>Jober</span>
         </div>
     
         
