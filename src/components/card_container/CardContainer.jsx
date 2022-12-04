@@ -51,7 +51,7 @@ const CardContainer = (props) => {
       {isLoading ?
         <div className='spinner'>
           <SpinnerDotted />
-          <p>Cargando...</p>
+          <p style={{fontSize : "3rem"}}>Cargando...</p>
         </div>
         :
         <div className='cardContainer'>
