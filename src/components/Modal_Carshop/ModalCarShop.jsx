@@ -39,29 +39,32 @@ function ModalCarShop() {
   };
 
   const sendinfoCart = async () => {
-    try {
-      /*if(itemsdata.length === 0){
-        return alert("No agrego ningun producto");
-      }*/
-      let res = await axios.post(BASE_URL, itemsdata);
-      if (res.status === 201) {
-        setIsLoading(true);
-      }
-    } catch (e) {
-      setIsLoading(true);
-      setIsError(true);
-    } finally {
-      setTimeout(() => setIsLoading(false), 2000);
-      setTimeout(function () {
-        if(itemsdata.length !== 0){
-          setConfirmedPurchase(true)
-        } else{
-          setIsError(true);
+    if(itemsdata.length !== 0){
+      try {
+        /*if(itemsdata.length === 0){
+          return alert("No agrego ningun producto");
+        }*/
+        let res = await axios.post(BASE_URL, itemsdata);
+        if (res.status === 201) {
+          setIsLoading(true);
         }
-      }, 2000);
-      localStorage.removeItem("itemscart");
-      updatecart();
+      } catch (e) {
+        setIsLoading(true);
+        setIsError(true);
+      } finally {
+        setTimeout(() => setIsLoading(false), 2000);
+        setTimeout(function () {
+          if(itemsdata.length !== 0){
+            setConfirmedPurchase(true)
+          } else{
+            setIsError(true);
+          }
+        }, 2000);
+        localStorage.removeItem("itemscart");
+        updatecart();
+      }
     }
+    
   };
 
   const handlerErrorPurchase = () => {

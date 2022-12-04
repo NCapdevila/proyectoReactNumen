@@ -16,7 +16,7 @@ function Footer(){
                 </div>
                 <div className='container-email'>
                 <input type="email" placeholder='Ingresa tu correo electrónico' className='input-mail' />
-                <ButtonFooter text="Suscribirme" style="btn-footer" ></ButtonFooter>
+                <ButtonFooter text="Suscribirme" style={`btn-footer`} ></ButtonFooter>
                 </div>
                 </div>
             </div>
@@ -56,9 +56,9 @@ function Footer(){
                 <div className='container-links-footer'>
                     <div className='container-seguinos'>SEGUINOS</div>
                     <div className='container-icons-footer'>
-                    <a href=""><FaInstagram style={{fontSize : '25px'}} /></a>
-                    <a href=""><FaFacebookF style={{fontSize : '25px'}} /></a>
-                    <a href=""><FaLinkedinIn style={{fontSize : '25px'}} /></a>
+                    <p><FaInstagram style={{fontSize : '25px', cursor:'pointer'}} /></p>
+                    <p><FaFacebookF style={{fontSize : '25px', cursor:'pointer'}} /></p>
+                    <p><FaLinkedinIn style={{fontSize : '25px', cursor:'pointer'}} /></p>
                     </div>
                 </div>
                 <div className='container-copy'>
