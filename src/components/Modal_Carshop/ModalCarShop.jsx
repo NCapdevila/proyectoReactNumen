@@ -137,7 +137,7 @@ function ModalCarShop() {
           
             <div className="confirmpurchase">
               <FontAwesomeIcon icon={faCheckCircle} className="checkconfirm" />
-              <p>Se compra fue confirmada</p>
+              <p>Su compra fue confirmada</p>
             </div>
           </Modal.Body>
           </>
@@ -146,7 +146,7 @@ function ModalCarShop() {
             <Modal.Body className="modal_items_body isloading__container">
               <div className="isloadingpurchase">
                 <FontAwesomeIcon icon={faSpinner} className="fa-spin spinner" />
-                <p>Su compra esta siendo confirmada...</p>
+                <p>Su compra está siendo confirmada...</p>
               </div>
             </Modal.Body>
           </div>
