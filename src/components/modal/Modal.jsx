@@ -141,7 +141,7 @@ function Modal({ open, onClose, products, agregaritems }) {
                 />
                 <p className="text-confirm">El producto ya fue agregado al carrito</p></div>
           </div>
-          <Button style='btn-vos' text='Aceptar' />
+          <Button style={`btn-vos`} text='Aceptar' />
         </div>
         <div onClick={() => handlershowitem()} className={`shownotexists${itemnotexists ? 'active':'closed'}`}>
           <div className="infoitemexist">
@@ -149,7 +149,7 @@ function Modal({ open, onClose, products, agregaritems }) {
               <p className="text-confirm">Se agrego el producto al carrito</p>
           </div>
           <div className="button_exists">
-          <Button style='btn-vos' className="pruebadsa" text='Aceptar' />
+          <Button style={`btn-vos`} className="pruebadsa" text='Aceptar' />
           </div>
         </div>
       </div>
