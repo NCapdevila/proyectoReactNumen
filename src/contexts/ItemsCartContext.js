@@ -16,37 +16,6 @@ export function ItemsCartContext (props) {
         }
     })
     const [update, setUpdate] = useState(false)
-    /*const [finalquant, setFinalQuant] = useState(finalquantity);
-    const initialprice = price*finalquant
-    const [finalprice, setFinalPrice] = useState(initialprice);
-
-    const handlerAddQuantity = (id) =>{
-
-      if(finalquant < quantity){
-        setFinalQuant(finalquant+1);
-        setFinalPrice(finalprice + price)
-      }
-      const dataprice={
-        finalprice,
-        finalquant
-      }
-      setItemsData([...itemsdata, dataprice])
-    }
-
-    const handlerSubstractQuantity = (id) =>{
-      if(finalquant>1){
-        setFinalQuant(finalquant-1);
-        setFinalPrice(((finalprice*100)- (price*100))/100)
-      }
-      const dataprice={
-        finalprice,
-        finalquant
-      }
-      setItemsData([...itemsdata, dataprice])
-
-
-      HACER FOREACH PARA COMPLETAR
-    }*/
 
     useEffect(() =>{
         localStorage.setItem("itemscart", JSON.stringify(itemsdata))
@@ -55,7 +24,6 @@ export function ItemsCartContext (props) {
     const agregaritem =  (items, finalquantity, finalprice) =>{
       const istrue = itemsdata.filter(item => item.id === items.id)
       if(istrue.length > 0){
-        /*return alert('Ya agregaste este item al producto anteriormente');*/
         return 0;
       }
           const itemsfinal = {

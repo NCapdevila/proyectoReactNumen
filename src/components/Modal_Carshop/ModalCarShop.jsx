@@ -39,29 +39,29 @@ function ModalCarShop() {
   };
 
   const sendinfoCart = async () => {
-    try {
-      /*if(itemsdata.length === 0){
-        return alert("No agrego ningun producto");
-      }*/
-      let res = await axios.post(BASE_URL, itemsdata);
-      if (res.status === 201) {
-        setIsLoading(true);
-      }
-    } catch (e) {
-      setIsLoading(true);
-      setIsError(true);
-    } finally {
-      setTimeout(() => setIsLoading(false), 2000);
-      setTimeout(function () {
-        if(itemsdata.length !== 0){
-          setConfirmedPurchase(true)
-        } else{
-          setIsError(true);
+    if(itemsdata.length !== 0){
+      try {
+        let res = await axios.post(BASE_URL, itemsdata);
+        if (res.status === 201) {
+          setIsLoading(true);
         }
-      }, 2000);
-      localStorage.removeItem("itemscart");
-      updatecart();
+      } catch (e) {
+        setIsLoading(true);
+        setIsError(true);
+      } finally {
+        setTimeout(() => setIsLoading(false), 2000);
+        setTimeout(function () {
+          if(itemsdata.length !== 0){
+            setConfirmedPurchase(true)
+          } else{
+            setIsError(true);
+          }
+        }, 2000);
+        localStorage.removeItem("itemscart");
+        updatecart();
+      }
     }
+    
   };
 
   const handlerErrorPurchase = () => {
@@ -86,9 +86,7 @@ function ModalCarShop() {
         dialogClassName="modal-90w"
         fullscreen={fullscreen}
         onHide={() => setLgShow(false)}
-        //aria-labelledby="example-modal-sizes-title-lg"
         aria-labelledby="example-custom-modal-styling-title"
-        
       >
         {isError ? (
           isLoading ? (
@@ -110,7 +108,8 @@ function ModalCarShop() {
                 onClick={() => handlerErrorPurchase()}
                 closeButton
               ></Modal.Header>
-            <Modal.Body className="modal_items_body confirmpurchase_container">
+            <Modal.Body className="modal_items_body confirmpurchase_container"
+            >
             
               <div className="confirmpurchase">
                 <FontAwesomeIcon
@@ -133,11 +132,12 @@ function ModalCarShop() {
           <Modal.Body
             
             className="modal_items_body confirmpurchase_container"
+            
           >
           
             <div className="confirmpurchase">
               <FontAwesomeIcon icon={faCheckCircle} className="checkconfirm" />
-              <p>Se compra fue confirmada</p>
+              <p>Su compra fue confirmada</p>
             </div>
           </Modal.Body>
           </>
@@ -146,7 +146,7 @@ function ModalCarShop() {
             <Modal.Body className="modal_items_body isloading__container">
               <div className="isloadingpurchase">
                 <FontAwesomeIcon icon={faSpinner} className="fa-spin spinner" />
-                <p>Su compra esta siendo confirmada...</p>
+                <p>Su compra está siendo confirmada...</p>
               </div>
             </Modal.Body>
           </div>

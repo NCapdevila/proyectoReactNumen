@@ -11,7 +11,6 @@ import { faCheckCircle, faXmarkCircle } from "@fortawesome/free-solid-svg-icons"
 function Modal({ open, onClose, products, agregaritems }) {
   let { offer, offerNumber, price } = products;
   price = offer ? price - price * (offerNumber / 100) : price;
-  //const initialState =  products.offer ? (products.price - (products.price * (products.offerNumber / 100))) : products.price
   const [finalquant, setFinalQuant] = useState(1);
   const initialprice = price * finalquant;
   const [finalprice, setFinalPrice] = useState(initialprice);
@@ -113,7 +112,6 @@ function Modal({ open, onClose, products, agregaritems }) {
                   {" "}
                   $
                   {
-                    //quantity * (products.price - (products.price * (products.offerNumber / 100)))
                     finalprice
                   }
                 </p>
@@ -130,18 +128,16 @@ function Modal({ open, onClose, products, agregaritems }) {
               </button>
             </div>
           </div>
-        </div>
+          </div>
 
         <div onClick={() => handlershowitem()} className={`showitemexists${showItemExists ? 'active':'closed'}`}>
-          <div>
             <div  className="infoitemexist">  
               <FontAwesomeIcon
                   icon={faXmarkCircle}
                   className="checkconfirm errorconfirm"
                 />
                 <p className="text-confirm">El producto ya fue agregado al carrito</p></div>
-          </div>
-          <Button style='btn-vos' text='Aceptar' />
+          <Button style={`btn-vos`} text='Aceptar'/>
         </div>
         <div onClick={() => handlershowitem()} className={`shownotexists${itemnotexists ? 'active':'closed'}`}>
           <div className="infoitemexist">
@@ -149,10 +145,12 @@ function Modal({ open, onClose, products, agregaritems }) {
               <p className="text-confirm">Se agrego el producto al carrito</p>
           </div>
           <div className="button_exists">
-          <Button style='btn-vos' className="pruebadsa" text='Aceptar' />
+          <Button style={`btn-vos`} className="pruebadsa" text='Aceptar'/>
           </div>
         </div>
       </div>
+      
+      
     )
   );
 }

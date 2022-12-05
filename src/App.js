@@ -11,10 +11,6 @@ import ShippingBanner from './components/ShippingBanner/ShippingBanner';
 import CardContainer from './components/card_container/CardContainer';
 import SwiperIg from './components/SwiperIg/SwiperIg';
 import ItemsCartContext from './contexts/ItemsCartContext';
-import { createContext } from 'react';
-import { Alert } from 'bootstrap';
-
-/*import "swiper/css/bundle";*/
 
 
 function App() {
