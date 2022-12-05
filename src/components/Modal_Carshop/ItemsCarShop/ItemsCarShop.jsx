@@ -3,7 +3,7 @@ import { useContext } from "react";
 import userItemContext from "../../../contexts/userItemContext";
 import ItemCart from "./ItemCart/ItemCart";
 
-const ItemsCarShop = (props) => {
+const ItemsCarShop = () => {
 
 const {itemsdata : data , deleteItem: deleteData, updateItem} = useContext(userItemContext);
 

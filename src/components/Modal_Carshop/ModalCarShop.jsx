@@ -41,9 +41,6 @@ function ModalCarShop() {
   const sendinfoCart = async () => {
     if(itemsdata.length !== 0){
       try {
-        /*if(itemsdata.length === 0){
-          return alert("No agrego ningun producto");
-        }*/
         let res = await axios.post(BASE_URL, itemsdata);
         if (res.status === 201) {
           setIsLoading(true);
@@ -89,9 +86,7 @@ function ModalCarShop() {
         dialogClassName="modal-90w"
         fullscreen={fullscreen}
         onHide={() => setLgShow(false)}
-        //aria-labelledby="example-modal-sizes-title-lg"
         aria-labelledby="example-custom-modal-styling-title"
-        
       >
         {isError ? (
           isLoading ? (
@@ -113,7 +108,8 @@ function ModalCarShop() {
                 onClick={() => handlerErrorPurchase()}
                 closeButton
               ></Modal.Header>
-            <Modal.Body className="modal_items_body confirmpurchase_container">
+            <Modal.Body className="modal_items_body confirmpurchase_container"
+            >
             
               <div className="confirmpurchase">
                 <FontAwesomeIcon
@@ -136,6 +132,7 @@ function ModalCarShop() {
           <Modal.Body
             
             className="modal_items_body confirmpurchase_container"
+            
           >
           
             <div className="confirmpurchase">

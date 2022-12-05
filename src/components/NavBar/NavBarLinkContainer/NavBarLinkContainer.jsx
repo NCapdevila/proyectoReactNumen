@@ -70,7 +70,6 @@ const NavBarLinkContainer = (props) => {
             }}
             
             className={`sublinkMobile__container arrowmobile_container ${menuMobileDropDownMan ? 'linkdeploy' : 'linkdeployclosed'}`}
-           
           >
             <NavBarLink key={4} text={`Hombre`}></NavBarLink>
             {
@@ -91,10 +90,6 @@ const NavBarLinkContainer = (props) => {
           <div  className="sublinkMobile__container userLogin">
           <FaRegUser className="userLoginIcon"/> <NavBarLink key={7} text="Registrarme"></NavBarLink>
           </div>
-          {/*<div className={`mobile__icons ${props.estado ? "active" : "closed"}`}>
-          <NavBarIcon />
-          </div>*/}
-
         </div>
         </div>
       </div>
