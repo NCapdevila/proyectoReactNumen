@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&family=Roboto+Slab&display=swap');
-
 * {
     box-sizing: border-box;
     list-style: none;
@@ -38,7 +36,6 @@
     height: 50px;
     width: 100px;
     margin-left: 20px;
-
 }
 
 .btn-nav:hover {
@@ -278,7 +275,10 @@
     .nav__icons {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         font-size: 35px;
+        background-color: rgb(255, 255, 255);
+        width: 105px;
     }
 
     .desktop__icons {
@@ -470,6 +470,19 @@
     }
     .navBarHeader__container{
         display: none;
+    }
+    .carshop__button_mobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1b1b1b;
+        background-color: rgb(255, 255, 255);
+        min-width: 45px;
+        max-width: 50px;
+        margin-top: 10px;
+        margin-right: 20px;
+        height: 35px;
+
     }
 }
 

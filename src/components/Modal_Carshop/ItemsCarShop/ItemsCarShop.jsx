@@ -1,32 +1,37 @@
-import imagen from '../imagen.jpg';
-import {FaTrashAlt } from 'react-icons/fa';
 
-const ItemsCarShop = () =>{
-    return(
-        <div className='modalBodyCar__container'>
-        <div className='modalBodyImg__container'>
-            <img src={imagen} alt="" />
-        </div>
-        <div className='itemName'>
-            <span className='nameItem__container'>Nombre del Articulo</span>
-            <span>Talle:</span>
-        </div>
-        <div className='totalItems'>
-            <span className='totalItemsTitle'>Cantidad:</span>
-            <div className='changeTotalItems'>
-                <button className='buttontotalItems buttonitem-1'>-</button>
-                <div className='numberItems'>1</div>
-                <button className='buttontotalItems buttonitem-2'>+</button>
-            </div>
-        </div>
-        <div className='priceItem'>
-            <span>$8200</span>
-        </div>
-        <div className='deleteItem'>
-            <button><FaTrashAlt/></button>
-        </div>
+import { useContext } from "react";
+import userItemContext from "../../../contexts/userItemContext";
+import ItemCart from "./ItemCart/ItemCart";
+
+const ItemsCarShop = () => {
+
+const {itemsdata : data , deleteItem: deleteData, updateItem} = useContext(userItemContext);
+
+
+  return (
+    <div>
+      <div>
+        {
+          data.map(data =>(
+            <ItemCart
+            key={data.id}
+            name={data.user}
+            img={data.imageRoot}
+            brand={data.brand}
+            price={data.price}
+            quantity={data.quantity}
+            finalquantity={data.quantityfinally}
+            id={data.id}
+            offer={data.offer}
+            offerdiscount={data.offerNumber}
+            deleteData={deleteData}
+            updateItem={updateItem}
+            />
+          ))
+        }
+      </div>
     </div>
-    )
-}
+  );
+};
 
 export default ItemsCarShop;

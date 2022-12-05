@@ -1,92 +1,143 @@
-
-.carshop__button{
+.carshop__button {
     border: 0 !important;
-    font-size: 20px;
+    font-size: 1.4rem;
     margin-right: 10px;
+    position: relative;
 }
 
-.carshop__button:hover{
-    background-color: #fff;
-    color: rgb(39, 42, 211);;
+.items-amount {
+    position: absolute;
+    top: 0.1rem;
+    right: -0.1rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+
 }
-.modalCarShopTitle{
-    text-align: center ;
+
+.carshop__button:hover {
+    background-color: #fff;
+    color: rgb(39, 42, 211);
+    ;
+}
+
+.modalCarShopTitle {
+    text-align: center;
     width: 100%;
 }
-.ModalHeaderCarShop{
+
+.ModalHeaderCarShop {
+    background-color: rgb(229, 229, 229);
     border: 0;
 }
-.modal_items_body{
+
+.modal_items_body {
+    background-color: rgb(229, 229, 229);
     height: 450px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
-.modalBodyCar__container{
+
+.modalBodyCar__container {
     display: flex;
     width: 100%;
     justify-content: space-around;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.modalBodyImg__container img{
+
+.modalBodyImg__container img {
     width: 128px;
     height: 128px;
     object-fit: contain;
 }
-.itemName{
+
+.itemName {
     display: flex;
     flex-flow: nowrap column;
     justify-content: space-evenly;
-}
-.nameItem__container{
-    text-transform: uppercase;
-}
-.totalItems{
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: space-evenly;
-    
-}
-.priceItem{
-    display: flex;
+    text-align: center;
+
     align-items: center;
-    font-size: 25px;
+    width: 120px;
+    max-width: 150px;
 }
 
-.deleteItem{
+.nameItem__container {
+    text-transform: uppercase;
+}
+
+.totalItems {
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-evenly;
+
+    min-width: 200px;
+    width: 180px;
+}
+
+.priceItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    max-width: 100px;
+    width: 120px;
+
+}
+
+.deleteItem {
     display: flex;
     font-size: 25px;
     align-items: center;
 }
-.totalItemsTitle{
+
+.deleteItem button {
+    background-color: white;
+}
+
+.totalItemsTitle {
     text-align: center;
 }
-.changeTotalItems{
+
+.changeTotalItems {
     display: flex;
     flex-flow: nowrap row;
-    
+    margin: 0 auto;
 }
-.numberItems{
+
+.numberItems {
     padding: 1px 30px;
     border-top: 1px solid rgb(116, 111, 111);
     border-bottom: 1px solid rgb(116, 111, 111);
 }
 
-.buttontotalItems{
+.buttontotalItems {
     padding: 1px 15px;
     border: 1px solid rgb(116, 111, 111);
+
 }
-.buttonitem-1{
+
+.buttonitem-1 {
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
 }
 
-.buttonitem-2{
+.buttonitem-2 {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
 }
 
-.modal_footer{  
-    border-top: 1px solid rgb(82, 80, 80);
-}
-.modal__footercontainer{
+.modal__footercontainer {
     display: flex;
     flex-flow: nowrap column;
     justify-content: space-around;
@@ -94,44 +145,253 @@
     width: 90%;
     height: 100px;
 }
-
-.buttonsCart__container{
+.modalBodyCar__container{
+    background-color: white;
+    margin-bottom: 1rem;
+}
+.buttonsCart__container {
     display: flex;
     justify-content: space-between;
 }
 
-.totalprice__container{
+.totalprice__container {
     display: flex;
     justify-content: flex-end;
     font-size: 25px;
 }
 
-.cancelButton{
+.cancelButton {
     background-color: rgb(255, 255, 255);
     color: #000;
     padding: 10px 50px;
     border: 1px solid rgb(0, 0, 0)
 }
 
-.ButtonCart{
+.ButtonCart {
     background-color: #724758;
     color: white;
     border: 0;
     padding: 10px 20px;
 }
-.ButtonCart:hover{
+
+.ButtonCart:hover {
     background-color: #724758;
     color: white;
 }
 
-.ButtonCart2{
+.ButtonCart2 {
     background-color: #222122;
     color: white;
     border: 0;
     padding: 10px 20px;
     margin-left: 20px;
 }
-.ButtonCart2:hover{
+
+.ButtonCart2:hover {
     background-color: #222122;
     color: white;
+}
+
+.deletionItemInfo {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(190, 188, 188);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pruebavosno {
+    display: none !important;
+    visibility: hidden;
+}
+
+.itemsinfoMobile {
+    display: none;
+}
+
+.emptycart {
+    margin: auto;
+    font-size: 30px;
+}
+
+.isloadingpurchase {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.spinner {
+    font-size: 100px;
+}
+
+.checkconfirm {
+    font-size: 70px;
+    color: rgb(41, 224, 41);
+}
+
+.confirmpurchase {
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.confirmpurchase_container {
+    height: 500px;
+}
+
+.isloading__container {
+    height: 500px;
+}
+
+.errorconfirm {
+    color: rgb(255, 43, 43);
+}
+
+
+@media (max-width: 992px) {
+    .modalBodyCar__container{
+        width: 95%;
+    }
+    .modal_items_body{
+        align-content: center;
+    }
+    .modal_footer {
+        height: auto;
+        background-color: white;
+    }
+    .itemsinfoMobile {
+        display: flex;
+    }
+
+    .namecontainer {
+        display: none;
+    }
+
+    .totalitemscontainer {
+        display: none;
+    }
+
+    .totalpricecontainer {
+        display: none;
+    }
+
+    .trashcontainer {
+        display: none;
+    }
+}
+
+@media (max-width: 680px) {
+    .modalBodyCar__container{
+        width: 95%;
+    }
+    .modal_items_body{
+        align-content: center;
+    }
+    .modal_footer {
+        height: auto;
+        background-color: white;
+    }
+    .itemsinfoMobile {
+        position: relative;
+        display: flex;
+        flex-flow: wrap column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 300px;
+        width: 300px;
+    }
+
+    .modalBodyImg__container {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .namecontainer {
+        display: none;
+    }
+
+    .totalitemscontainer {
+        display: none;
+    }
+
+    .totalpricecontainer {
+        display: none;
+    }
+
+    .trashcontainer {
+        display: none;
+    }
+
+    .trashcontainer__mobile {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .modal__footercontainer {
+        display: flex;
+        flex-flow: column;
+        height: 240px;
+        overflow-y: auto;
+    }
+
+    .buttonsCart__container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+    }
+
+    .buttonsCart__container button {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+        border-radius: 10px !important;
+    }
+
+    .ButtonCart {
+        order: 1;
+    }
+
+    .cancelbutton_container {
+
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        order: 2;
+
+    }
+
+    .cancelButton button {
+        border: 1px solid #000;
+
+    }
+
+    .buttonmobile__container {
+
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
+        order: 1;
+    }
+
+    .modal_footer {
+        height: auto;
+        background-color: white;
+    }
+    .modal_items_body{
+        align-content: center;
+    }
 }

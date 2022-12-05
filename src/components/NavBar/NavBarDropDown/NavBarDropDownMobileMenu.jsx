@@ -6,7 +6,6 @@ import NavBarDropDownItemsContainer from './NavBarDropDownItemsContainer';
 const NavBarDropDownMobileMenu = (props) =>{
     const { links, itsFor } = props;
     const [selected, setSelected] = useState(null);
- 
     const toggle= (index) =>{
         if(selected === index){
             return setSelected(null);
@@ -17,50 +16,48 @@ const NavBarDropDownMobileMenu = (props) =>{
     const nameItems = [
         {
             nameItem : 'Categoria',
+            id: 1,
             item: <NavBarDropDownItemsContainer items={links}/>
         },
         {
             nameItem : 'Marcas',
+            id: 2,
             item: <NavBarDropDownItemsContainer items={dropDownItemsBrands} itsFor= {itsFor}/>
         },
         {
             nameItem : 'Top Sellers',
+            id: 3,
             item: <NavBarDropDownItemsContainer items={dropDownItemsTopSellers} itsFor= {itsFor}/>
         },
         {
             nameItem : 'Mas opciones',
+            id: 4,
             item: <NavBarDropDownItemsContainer items={dropDownItemsExtras}/>
         },
     ]
 
     return(
-        <div className={`navBarDropDownMobileMenu__container ${props.estado ? "active" : "closed"}`}>
+        <div key={100}  className={`navBarDropDownMobileMenu__container ${props.estado ? "active" : "closed"}`}>
 
-
+        <ul>
                 {
                     nameItems.map((item, index) =>{
+
                         return(
-                        <>
+                        <div key={index}>
                         <div className='itemMenuMobile_container'  onClick={() => {toggle(index)}}>
-                            <li key={index}>{item.nameItem}</li>
+                            <li key={item.id}>{item.nameItem}</li>
                             <ArrowMobile state={selected === index ? true : false}/>
                         </div>
                         <div className={`${selected === index ? 'showContent' : 'disableContent'}`}>
-                            {item.item}
+                            <li key={item.id}>{item.item}</li>
                             </div>
-                        </>
+                        </div>
                         )
                         
                     })
                 }
-                {/*<li key={1}>Categoria</li>
-                <NavBarDropDownItemsContainer items={links} title='Categoria' />
-                <li key={2}>Marcas</li>
-                <NavBarDropDownItemsContainer items={dropDownItemsBrands} itsFor= {itsFor} title='Marcas' />
-                <li key={3}>Top Sellers</li>
-                <NavBarDropDownItemsContainer items={dropDownItemsTopSellers} itsFor= {itsFor} title='Top-Sellers' />
-                <li key={4}>Descubre</li>
-                <NavBarDropDownItemsContainer items={dropDownItemsExtras} title='Mas opciones' />*/}
+                </ul>
         </div>
     )
 }

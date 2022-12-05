@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Rubik', sans-serif !important;
+}
 
 .containerbanner{
     margin-top: 0.8rem;
@@ -31,4 +36,31 @@
 
 .bodybanner{
     border-left: 1px solid black;
+}
+
+@media (max-width: 511px) {
+    .cardbanner{
+        width: 50%;
+        height: 3rem;
+    }
+    .imgbanner{
+        width: 0.9rem;
+        height: auto;
+        margin-right: 0.6rem;
+    }
+    
+    .titlebanner{
+        font-size: 0.6rem;
+        color: black;
+        font-weight: 400;
+    }
+    
+    .textbanner{
+        font-size: 0.5rem;
+        color: rgb(105, 102, 102);
+    }
+    
+    .bodybanner{
+        border-left: 0.5px solid black;
+    }
 }
