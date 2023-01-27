@@ -14,9 +14,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### 'json-server --w data/db.json --p 9000 ###
+### `json-server --w data/db.json --p 9000` ###
 
-Runs the back mokeado
+Runs the backend mokeado
 
 
 #### icons agregados ####
